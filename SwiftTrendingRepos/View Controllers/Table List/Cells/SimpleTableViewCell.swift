@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SimpleTableViewCell: UITableViewCell {
+final class SimpleTableViewCell: UITableViewCell {
 
     @IBOutlet private var containerView: UIView!
     @IBOutlet private var repoNameLabel: UILabel!

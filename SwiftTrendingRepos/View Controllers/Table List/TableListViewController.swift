@@ -12,7 +12,7 @@ protocol TableListViewControllerDelegate: AnyObject {
     func refreshData(completion: @escaping ()->())
 }
 
-class TableListViewController: UIViewController {
+final class TableListViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
