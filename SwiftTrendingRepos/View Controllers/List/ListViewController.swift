@@ -45,16 +45,10 @@ final class ListViewController: UIViewController {
     private func showTable() {
         let tableListViewController = TableListViewController()
         addChild(tableListViewController)
+        
         let tableListView = tableListViewController.view ?? UIView()
         containerView.addSubview(tableListView)
-        
-        tableListView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            tableListView.topAnchor.constraint(equalTo: containerView.topAnchor),
-            tableListView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-            tableListView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            tableListView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
-            ])
+        tableListView.fill(view: containerView)
         
         tableListViewController.data = viewModel?.reposList ?? []
     }
