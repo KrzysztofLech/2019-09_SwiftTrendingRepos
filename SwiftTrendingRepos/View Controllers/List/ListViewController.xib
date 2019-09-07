@@ -6,12 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="SwiftTrendingRepos" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="5Ld-LW-90H" id="QYs-7Y-nFT"/>
+                <outlet property="containerView" destination="cSS-O4-whi" id="qGZ-DU-icp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,8 +22,40 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.99888390299999996" green="0.0022462564159999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NW8-HS-1IX" userLabel="Tool Bar">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="azn-Sq-cYe"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSS-O4-whi">
+                    <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5Ld-LW-90H">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cSS-O4-whi" secondAttribute="bottom" id="3Tw-mN-B6I"/>
+                <constraint firstItem="5Ld-LW-90H" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9PE-ok-ukT"/>
+                <constraint firstItem="NW8-HS-1IX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cdi-X1-1Zh"/>
+                <constraint firstAttribute="trailing" secondItem="cSS-O4-whi" secondAttribute="trailing" id="K8l-Kq-m79"/>
+                <constraint firstItem="5Ld-LW-90H" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TNd-qw-2Fg"/>
+                <constraint firstItem="NW8-HS-1IX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ToJ-pu-VfH"/>
+                <constraint firstItem="cSS-O4-whi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Vw8-gd-vfV"/>
+                <constraint firstAttribute="trailing" secondItem="NW8-HS-1IX" secondAttribute="trailing" id="vwH-NQ-LRt"/>
+                <constraint firstItem="cSS-O4-whi" firstAttribute="top" secondItem="NW8-HS-1IX" secondAttribute="bottom" id="xV9-72-On9"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.0" green="0.0" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
