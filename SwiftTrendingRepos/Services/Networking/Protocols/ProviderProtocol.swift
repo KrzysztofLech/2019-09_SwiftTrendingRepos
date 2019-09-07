@@ -6,5 +6,5 @@ import UIKit
 
 protocol ProviderProtocol {
     func request<T>(type: T.Type, service: ServiceProtocol, completion: @escaping (Result<T, NetworkError>) -> Void) where T: Decodable
-    func downloadImage(url: String, completion: @escaping (Result<UIImage, NetworkError>) -> Void)
+    func downloadImage(url: String, completion: @escaping (UIImage?) -> Void)
 }

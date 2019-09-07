@@ -10,7 +10,7 @@ import UIKit
 
 protocol ApiServiceWorkerProtocol: AnyObject {
     func getRepos(completion: @escaping (Result<[GithubRepo], NetworkError>) -> Void)
-    func downloadImage(url: String, completion: @escaping (Result<UIImage, NetworkError>)->())
+    func downloadImage(url: String, completion: @escaping (UIImage?) -> ())
 }
 
 final class ApiServiceWorker: ApiServiceWorkerProtocol {
@@ -26,7 +26,7 @@ final class ApiServiceWorker: ApiServiceWorkerProtocol {
         provider.request(type: [GithubRepo].self, service: service, completion: completion)
     }
     
-    func downloadImage(url: String, completion: @escaping (Result<UIImage, NetworkError>)->()) {
+    func downloadImage(url: String, completion: @escaping (UIImage?) -> ()) {
         provider.downloadImage(url: url, completion: completion)
     }
 }

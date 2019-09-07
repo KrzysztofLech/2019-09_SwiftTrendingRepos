@@ -35,6 +35,7 @@
 		6B5A0921232412F1001CBC10 /* GithubRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A0920232412F1001CBC10 /* GithubRepoViewModel.swift */; };
 		6B5A092323241410001CBC10 /* Int+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A092223241410001CBC10 /* Int+extensions.swift */; };
 		6B5A092623241B77001CBC10 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A092523241B77001CBC10 /* ToolBarView.swift */; };
+		6B5A092823243D65001CBC10 /* TableListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A092723243D65001CBC10 /* TableListController.swift */; };
 		6B7473CC2323B11B006BBC20 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7473CA2323B11B006BBC20 /* ListViewController.swift */; };
 		6B7473CD2323B11B006BBC20 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7473CB2323B11B006BBC20 /* ListViewController.xib */; };
 		6B7473D22323B36B006BBC20 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7473CF2323B36B006BBC20 /* UIView+extensions.swift */; };
@@ -74,6 +75,7 @@
 		6B5A0920232412F1001CBC10 /* GithubRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoViewModel.swift; sourceTree = "<group>"; };
 		6B5A092223241410001CBC10 /* Int+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+extensions.swift"; sourceTree = "<group>"; };
 		6B5A092523241B77001CBC10 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
+		6B5A092723243D65001CBC10 /* TableListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListController.swift; sourceTree = "<group>"; };
 		6B7473CA2323B11B006BBC20 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		6B7473CB2323B11B006BBC20 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		6B7473CF2323B36B006BBC20 /* UIView+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				6B5A09192323D48F001CBC10 /* Cells */,
 				6B5A09112323CB01001CBC10 /* TableListViewController.swift */,
 				6B5A09122323CB01001CBC10 /* TableListViewController.xib */,
+				6B5A092723243D65001CBC10 /* TableListController.swift */,
 			);
 			path = "Table List";
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				6B7473D92323BF49006BBC20 /* Alert.swift in Sources */,
 				6B1D9B5323218B7E00D02121 /* URLRequestExtension.swift in Sources */,
 				6B1D9B5823218B7E00D02121 /* ApiService.swift in Sources */,
+				6B5A092823243D65001CBC10 /* TableListController.swift in Sources */,
 				6B1D9B5423218B7E00D02121 /* ApiServiceWorker.swift in Sources */,
 				6B1D9B5523218B7E00D02121 /* ServiceProtocol.swift in Sources */,
 				6B1D9B302321846200D02121 /* StartViewController.swift in Sources */,

@@ -18,6 +18,8 @@ final class TableListViewController: UIViewController {
     
     var data: [GithubRepoViewModel] = []
     weak var delegate: TableListViewControllerDelegate?
+    
+    private let controller = TableListController()
     private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -26,8 +28,6 @@ final class TableListViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
         tableView.register(cellAndNibName: SimpleTableViewCell.toString())
         
         tableView.refreshControl = refreshControl
@@ -49,7 +49,11 @@ extension TableListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTableViewCell.toString(), for: indexPath) as? SimpleTableViewCell else { return UITableViewCell() }
-        cell.configure(withData: data[indexPath.row])
+        let cellData = data[indexPath.row]
+        cell.configure(withData: cellData)
+        controller.getImage(url: cellData.avatarUrl) { image in
+            cell.setupAvatarImage(image)
+        }
         return cell
     }
 }

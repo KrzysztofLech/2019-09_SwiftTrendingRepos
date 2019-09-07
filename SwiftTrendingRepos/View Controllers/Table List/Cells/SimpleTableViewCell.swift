@@ -28,6 +28,8 @@ final class SimpleTableViewCell: UITableViewCell {
         super.prepareForReuse()
         
         activityIndicator.startAnimating()
+        
+        avatarImageView.backgroundColor = .white
         avatarImageView.image = nil
     }
     
@@ -44,5 +46,16 @@ final class SimpleTableViewCell: UITableViewCell {
         starsLabel.text = String(data.stars)
         authorLabel.text = data.author
         avatarUrl = data.avatarUrl
+    }
+    
+    func setupAvatarImage(_ image: UIImage?) {
+        activityIndicator.stopAnimating()
+        
+        if let image = image {
+            avatarImageView.image = image
+        } else {
+            avatarImageView.backgroundColor = .clear
+            avatarImageView.image = UIImage(named: "githubAvatarPlaceholder")
+        }
     }
 }
