@@ -10,7 +10,7 @@ import Foundation
 
 class ListViewModel {
     
-    private(set) var reposList: [GithubRepo] = []
+    private(set) var reposList: [GithubRepoViewModel] = []
     
     var apiServiceWorker: ApiServiceWorkerProtocol?
     var isDataExist: Bool {
@@ -26,6 +26,8 @@ class ListViewModel {
             switch result {
             case .success(let data):
                 self?.reposList = data
+                    .sorted { $0.stars > $1.stars }
+                    .map { GithubRepoViewModel(from: $0) }
                 DispatchQueue.main.async { completion(nil) }
                 
             case .failure(let error):

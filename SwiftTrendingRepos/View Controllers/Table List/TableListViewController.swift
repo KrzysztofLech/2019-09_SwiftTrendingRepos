@@ -12,7 +12,7 @@ class TableListViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
-    var data: [GithubRepo] = []
+    var data: [GithubRepoViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

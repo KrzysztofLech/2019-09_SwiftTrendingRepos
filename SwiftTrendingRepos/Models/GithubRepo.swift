@@ -6,8 +6,6 @@
 //  Copyright © 2019 Krzysztof Lech. All rights reserved.
 //
 
-import Foundation
-
 struct GithubRepo: Decodable {
     
     private enum CodingKeys: String, CodingKey {

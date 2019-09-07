@@ -39,7 +39,7 @@ class SimpleTableViewCell: UITableViewCell {
         avatarImageView.layer.cornerRadius = avatarImageView.bounds.height / 2
     }
     
-    func configure(withData data: GithubRepo) {
+    func configure(withData data: GithubRepoViewModel) {
         repoNameLabel.text = data.name
         starsLabel.text = String(data.stars)
         authorLabel.text = data.author
