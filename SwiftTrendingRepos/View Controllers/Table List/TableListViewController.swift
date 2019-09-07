@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol TableListViewControllerDelegate: AnyObject {
+    func refreshData(completion: @escaping ()->())
+}
+
 class TableListViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
     var data: [GithubRepoViewModel] = []
+    weak var delegate: TableListViewControllerDelegate?
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +29,16 @@ class TableListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(cellAndNibName: SimpleTableViewCell.toString())
+        
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+    }
+    
+    @objc private func refreshData() {
+        delegate?.refreshData { [weak self] in
+            self?.tableView.reloadData()
+            self?.refreshControl.endRefreshing()
+        }
     }
 }
 
