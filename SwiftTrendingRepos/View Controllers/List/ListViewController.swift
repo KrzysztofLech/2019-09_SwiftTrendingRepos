@@ -55,6 +55,20 @@ final class ListViewController: UIViewController {
         containerView.addSubview(tableListView)
         tableListView.fill(view: containerView)
         
+        tableListViewController.delegate = self
         tableListViewController.data = viewModel?.reposList ?? []
+    }
+}
+
+extension ListViewController: TableListViewControllerDelegate {
+    func refreshData(completion: @escaping () -> ()) {
+        viewModel?.fetchData(completion: { [weak self] error in
+            if let error = error {
+                self?.showAlert(withTitle: error.message)
+            } else {
+                completion()
+                self?.toolBarView.changeCounterValue(self?.viewModel?.repoCounter ?? 0)
+            }
+        })
     }
 }
