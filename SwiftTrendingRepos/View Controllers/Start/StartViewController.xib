@@ -19,7 +19,24 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJ1-3a-mLt">
+                    <rect key="frame" x="107" y="398" width="200" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="3ZM-9S-0mL"/>
+                        <constraint firstAttribute="width" constant="200" id="zxB-LB-6pz"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="buttonAction" destination="-1" eventType="touchUpInside" id="2dB-A1-lkW"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="cJ1-3a-mLt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JkU-aH-a2t"/>
+                <constraint firstItem="cJ1-3a-mLt" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gPx-CA-F0J"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
