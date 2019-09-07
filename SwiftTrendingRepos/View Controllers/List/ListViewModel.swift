@@ -13,9 +13,7 @@ class ListViewModel {
     private(set) var reposList: [GithubRepoViewModel] = []
     
     var apiServiceWorker: ApiServiceWorkerProtocol?
-    var isDataExist: Bool {
-        return !reposList.isEmpty
-    }
+    var repoCounter: Int { return reposList.count }
     
     init(apiService: ApiServiceWorkerProtocol = ApiServiceWorker() ) {
         apiServiceWorker = apiService

@@ -34,6 +34,7 @@
 		6B5A091F2323DA9B001CBC10 /* UITableView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A091E2323DA9B001CBC10 /* UITableView+extensions.swift */; };
 		6B5A0921232412F1001CBC10 /* GithubRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A0920232412F1001CBC10 /* GithubRepoViewModel.swift */; };
 		6B5A092323241410001CBC10 /* Int+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A092223241410001CBC10 /* Int+extensions.swift */; };
+		6B5A092623241B77001CBC10 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A092523241B77001CBC10 /* ToolBarView.swift */; };
 		6B7473CC2323B11B006BBC20 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7473CA2323B11B006BBC20 /* ListViewController.swift */; };
 		6B7473CD2323B11B006BBC20 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7473CB2323B11B006BBC20 /* ListViewController.xib */; };
 		6B7473D22323B36B006BBC20 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7473CF2323B36B006BBC20 /* UIView+extensions.swift */; };
@@ -72,6 +73,7 @@
 		6B5A091E2323DA9B001CBC10 /* UITableView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extensions.swift"; sourceTree = "<group>"; };
 		6B5A0920232412F1001CBC10 /* GithubRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoViewModel.swift; sourceTree = "<group>"; };
 		6B5A092223241410001CBC10 /* Int+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+extensions.swift"; sourceTree = "<group>"; };
+		6B5A092523241B77001CBC10 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 		6B7473CA2323B11B006BBC20 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		6B7473CB2323B11B006BBC20 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		6B7473CF2323B36B006BBC20 /* UIView+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		6B1D9B282321823500D02121 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				6B5A092423241B46001CBC10 /* Views */,
 				6B7473CA2323B11B006BBC20 /* ListViewController.swift */,
 				6B7473CB2323B11B006BBC20 /* ListViewController.xib */,
 				6B7473D42323B7AF006BBC20 /* ListViewModel.swift */,
@@ -268,6 +271,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		6B5A092423241B46001CBC10 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B5A092523241B77001CBC10 /* ToolBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6BE59888232177FE007C45EC = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +408,7 @@
 				6B7473CC2323B11B006BBC20 /* ListViewController.swift in Sources */,
 				6B1D9B332321896100D02121 /* GithubRepo.swift in Sources */,
 				6B1D9B5123218B7E00D02121 /* URLComponentsExtension.swift in Sources */,
+				6B5A092623241B77001CBC10 /* ToolBarView.swift in Sources */,
 				6B5A0921232412F1001CBC10 /* GithubRepoViewModel.swift in Sources */,
 				6B5A092323241410001CBC10 /* Int+extensions.swift in Sources */,
 				6B5A091C2323D4CF001CBC10 /* SimpleTableViewCell.swift in Sources */,

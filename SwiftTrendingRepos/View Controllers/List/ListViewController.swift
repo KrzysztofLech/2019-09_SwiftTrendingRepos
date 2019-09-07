@@ -11,6 +11,7 @@ import UIKit
 final class ListViewController: UIViewController {
     
     @IBOutlet private var containerView: UIView!
+    @IBOutlet private var toolBarView: ToolBarView!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
     private var viewModel: ListViewModel?
@@ -29,7 +30,7 @@ final class ListViewController: UIViewController {
             if let error = error {
                 self?.showAlert(withTitle: error.message)
             } else {
-                self?.showTable()
+                self?.presentData()
             }
         })
     }
@@ -39,6 +40,11 @@ final class ListViewController: UIViewController {
             self?.fetchData()
         }
         present(alertController, animated: true)
+    }
+    
+    private func presentData() {
+        toolBarView.changeCounterValue(viewModel?.repoCounter ?? 0)
+        showTable()
     }
     
     private func showTable() {

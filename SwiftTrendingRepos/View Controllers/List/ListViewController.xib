@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="activityIndicator" destination="5Ld-LW-90H" id="QYs-7Y-nFT"/>
                 <outlet property="containerView" destination="cSS-O4-whi" id="qGZ-DU-icp"/>
+                <outlet property="toolBarView" destination="NW8-HS-1IX" id="l2U-Wo-zpQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,12 +24,33 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NW8-HS-1IX" userLabel="Tool Bar">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NW8-HS-1IX" userLabel="Tool Bar" customClass="ToolBarView" customModule="SwiftTrendingRepos" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repositories:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-2n-71S">
+                            <rect key="frame" x="20" y="19.5" width="105" height="21"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0X-Uv-1rO">
+                            <rect key="frame" x="130" y="19.5" width="11" height="21"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.3148589691558441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="y0X-Uv-1rO" firstAttribute="leading" secondItem="CbH-2n-71S" secondAttribute="trailing" constant="5" id="4yN-nK-ATz"/>
+                        <constraint firstItem="y0X-Uv-1rO" firstAttribute="centerY" secondItem="CbH-2n-71S" secondAttribute="centerY" id="YSF-pw-oFg"/>
                         <constraint firstAttribute="height" constant="60" id="azn-Sq-cYe"/>
+                        <constraint firstItem="CbH-2n-71S" firstAttribute="centerY" secondItem="NW8-HS-1IX" secondAttribute="centerY" id="oQW-hx-ftO"/>
+                        <constraint firstItem="CbH-2n-71S" firstAttribute="leading" secondItem="NW8-HS-1IX" secondAttribute="leading" constant="20" id="qdT-ho-T5I"/>
                     </constraints>
+                    <connections>
+                        <outlet property="counterLabel" destination="y0X-Uv-1rO" id="yoh-uv-5Vk"/>
+                    </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSS-O4-whi">
                     <rect key="frame" x="0.0" y="104" width="414" height="792"/>
