@@ -29,7 +29,6 @@ final class ListViewController: UIViewController {
             if let error = error {
                 self?.showAlert(withTitle: error.message)
             } else {
-                print(self?.viewModel?.reposList.count)
                 self?.showTable()
             }
         })
