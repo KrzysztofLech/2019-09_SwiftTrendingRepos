@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableListViewController" customModule="SwiftTrendingRepos" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="CVg-0j-Jw1" id="QtI-6D-9BE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +21,19 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CVg-0j-Jw1">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="CVg-0j-Jw1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0dS-Px-YkX"/>
+                <constraint firstAttribute="bottom" secondItem="CVg-0j-Jw1" secondAttribute="bottom" id="23L-4E-qke"/>
+                <constraint firstAttribute="trailing" secondItem="CVg-0j-Jw1" secondAttribute="trailing" id="mgN-Lh-h9c"/>
+                <constraint firstItem="CVg-0j-Jw1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nCK-Rp-fsg"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

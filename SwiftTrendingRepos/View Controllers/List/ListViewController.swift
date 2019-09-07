@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
-
+final class ListViewController: UIViewController {
+    
+    @IBOutlet private var containerView: UIView!
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
+    
     private var viewModel: ListViewModel?
     
     override func viewDidLoad() {
@@ -20,11 +23,14 @@ class ListViewController: UIViewController {
     }
 
     private func fetchData() {
+        activityIndicator.startAnimating()
         viewModel?.fetchData(completion: { [weak self] error in
+            self?.activityIndicator.stopAnimating()
             if let error = error {
                 self?.showAlert(withTitle: error.message)
             } else {
                 print(self?.viewModel?.reposList.count)
+                self?.showTable()
             }
         })
     }
@@ -34,5 +40,22 @@ class ListViewController: UIViewController {
             self?.fetchData()
         }
         present(alertController, animated: true)
+    }
+    
+    private func showTable() {
+        let tableListViewController = TableListViewController()
+        addChild(tableListViewController)
+        let tableListView = tableListViewController.view ?? UIView()
+        containerView.addSubview(tableListView)
+        
+        tableListView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableListView.topAnchor.constraint(equalTo: containerView.topAnchor),
+            tableListView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            tableListView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            tableListView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
+            ])
+        
+        tableListViewController.data = viewModel?.reposList ?? []
     }
 }

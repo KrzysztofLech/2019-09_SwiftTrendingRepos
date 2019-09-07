@@ -13,6 +13,9 @@ class ListViewModel {
     private(set) var reposList: [GithubRepo] = []
     
     var apiServiceWorker: ApiServiceWorkerProtocol?
+    var isDataExist: Bool {
+        return !reposList.isEmpty
+    }
     
     init(apiService: ApiServiceWorkerProtocol = ApiServiceWorker() ) {
         apiServiceWorker = apiService
@@ -23,10 +26,10 @@ class ListViewModel {
             switch result {
             case .success(let data):
                 self?.reposList = data
-                completion(nil)
+                DispatchQueue.main.async { completion(nil) }
                 
             case .failure(let error):
-                completion(error)
+                DispatchQueue.main.async { completion(error) }
             }
         })
     }
