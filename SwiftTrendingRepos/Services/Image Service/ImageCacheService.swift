@@ -8,13 +8,11 @@
 
 import UIKit
 
-protocol ImageCacheServiceProtocol {
-    func cache(object: UIImage, forKey key: String)
-    func getFromCache(key: String) -> UIImage?
-}
+final class ImageCacheService {
 
-final class ImageCacheService: ImageCacheServiceProtocol {
-
+    static let shared = ImageCacheService()
+    private init() {}
+    
     private var cache = NSCache<NSString, UIImage>()
     
     func cache(object: UIImage, forKey key: String) {

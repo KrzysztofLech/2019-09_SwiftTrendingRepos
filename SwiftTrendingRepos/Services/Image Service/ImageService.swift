@@ -16,15 +16,13 @@ protocol ImageServiceProtocol {
 final class ImageService: ImageServiceProtocol {
     
     private var apiServiceWorker: ApiServiceWorkerProtocol
-    private var imageCacheService: ImageCacheServiceProtocol
     
-    init(apiServiceWorker: ApiServiceWorkerProtocol = ApiServiceWorker(), imageCacheService: ImageCacheServiceProtocol = ImageCacheService()) {
+    init(apiServiceWorker: ApiServiceWorkerProtocol = ApiServiceWorker()) {
         self.apiServiceWorker = apiServiceWorker
-        self.imageCacheService = imageCacheService
     }
     
     func getImage(url: String, completion: @escaping (UIImage?) -> ()) {
-        guard let image = imageCacheService.getFromCache(key: url) else {
+        guard let image = ImageCacheService.shared.getFromCache(key: url) else {
             downloadImage(url: url, completion: completion)
             return
         }
@@ -33,13 +31,13 @@ final class ImageService: ImageServiceProtocol {
     }
     
     func downloadImage(url: String, completion: @escaping (UIImage?) -> ()) {
-        apiServiceWorker.downloadImage(url: url, completion: { [weak self] image in
+        apiServiceWorker.downloadImage(url: url, completion: { image in
             guard let image = image else {
                 DispatchQueue.main.async { completion(nil) }
                 return
             }
             
-            self?.imageCacheService.cache(object: image, forKey: url)
+            ImageCacheService.shared.cache(object: image, forKey: url)
             DispatchQueue.main.async { completion(image) }
         })
     }
