@@ -14,6 +14,6 @@ final class StartViewController: UIViewController {
     @IBAction func buttonAction() {
         let listViewController = ListViewController(nibName: ListViewController.toString(), bundle: nil)
         listViewController.modalTransitionStyle = .crossDissolve
-        present(listViewController, animated: true, completion: nil)
+        present(listViewController, animated: true)
     }
 }

@@ -71,4 +71,11 @@ extension ListViewController: TableListViewControllerDelegate {
             }
         })
     }
+    
+    func selectedRepo(atIndex index: IndexPath) {
+        let detailsViewController = DetailsViewController(nibName: DetailsViewController.toString(), bundle: nil)
+        detailsViewController.modalTransitionStyle = .crossDissolve
+        detailsViewController.repoItem = viewModel?.reposList[index.row]
+        present(detailsViewController, animated: true)
+    }
 }

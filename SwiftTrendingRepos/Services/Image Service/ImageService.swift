@@ -35,7 +35,7 @@ final class ImageService: ImageServiceProtocol {
     func downloadImage(url: String, completion: @escaping (UIImage?) -> ()) {
         apiServiceWorker.downloadImage(url: url, completion: { [weak self] image in
             guard let image = image else {
-                completion(nil)
+                DispatchQueue.main.async { completion(nil) }
                 return
             }
             

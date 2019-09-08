@@ -10,6 +10,7 @@ import UIKit
 
 protocol TableListViewControllerDelegate: AnyObject {
     func refreshData(completion: @escaping ()->())
+    func selectedRepo(atIndex index: IndexPath)
 }
 
 final class TableListViewController: UIViewController {
@@ -60,4 +61,8 @@ extension TableListViewController: UITableViewDataSource {
     }
 }
 
-extension TableListViewController: UITableViewDelegate {}
+extension TableListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.selectedRepo(atIndex: indexPath)
+    }
+}
