@@ -8,7 +8,12 @@
 
 import UIKit
 
-final class TableListController {
+protocol ImageServiceProtocol {
+    func getImage(url: String, completion: @escaping (UIImage?) -> ())
+    func downloadImage(url: String, completion: @escaping (UIImage?) -> ())
+}
+
+final class ImageService: ImageServiceProtocol {
     
     private var apiServiceWorker: ApiServiceWorkerProtocol
     private var imageCacheService: ImageCacheServiceProtocol
@@ -27,7 +32,7 @@ final class TableListController {
         completion(image)
     }
     
-    private func downloadImage(url: String, completion: @escaping (UIImage?) -> ()) {
+    func downloadImage(url: String, completion: @escaping (UIImage?) -> ()) {
         apiServiceWorker.downloadImage(url: url, completion: { [weak self] image in
             guard let image = image else {
                 completion(nil)
