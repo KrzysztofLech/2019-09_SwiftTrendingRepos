@@ -16,34 +16,38 @@
                 <outlet property="activityIndicator" destination="mrI-2I-FMC" id="Ppf-cS-VyI"/>
                 <outlet property="authorLabel" destination="amy-Zp-s0X" id="tvA-1u-l4r"/>
                 <outlet property="avatarImageView" destination="kIn-jO-VZf" id="mqK-gA-u5K"/>
-                <outlet property="containerView" destination="URU-wc-Iw3" id="Mlh-IC-mEW"/>
                 <outlet property="descriptionLabel" destination="YXz-3N-qS3" id="iEN-Of-5Z7"/>
                 <outlet property="forksLabel" destination="qDh-ZC-Hyf" id="q7k-Aw-26j"/>
+                <outlet property="repoDetailsView" destination="URU-wc-Iw3" id="Mlh-IC-mEW"/>
                 <outlet property="repoNameLabel" destination="4ka-wb-hjW" id="wc0-vi-2qO"/>
                 <outlet property="repoUrlLabel" destination="Mbl-Z0-WzZ" id="Mit-Tv-dfg"/>
                 <outlet property="starsLabel" destination="uqH-pb-T56" id="IsN-9z-K6j"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="LBb-dA-iod" id="f2e-Ue-MSB"/>
+                <outlet property="webViewContainerBottomConstrait" destination="gd5-r1-F4b" id="l2V-cu-KrJ"/>
+                <outlet property="webViewContainerHeightConstraint" destination="z5N-q8-UPG" id="ZkY-tU-psx"/>
+                <outlet property="webViewContainerView" destination="SHd-Ls-Cyg" id="u5A-Nd-hKd"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="GradientView" customModule="SwiftTrendingRepos" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xy-IX-Nk2">
-                    <rect key="frame" x="0.0" y="44" width="80" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xy-IX-Nk2" userLabel="Back Button">
+                    <rect key="frame" x="0.0" y="34" width="80" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="PyZ-ve-cDw"/>
                         <constraint firstAttribute="height" constant="50" id="fbJ-vt-VVA"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="Back"/>
                     <connections>
                         <action selector="closeButtonAction" destination="-1" eventType="touchUpInside" id="elV-P5-Skb"/>
                     </connections>
                 </button>
-                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URU-wc-Iw3">
-                    <rect key="frame" x="50" y="144" width="314" height="460.5"/>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URU-wc-Iw3" customClass="GradientView" customModule="SwiftTrendingRepos" customModuleProvider="target">
+                    <rect key="frame" x="50" y="84" width="314" height="460.5"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lsb-Ii-BtO" userLabel="Author View">
                             <rect key="frame" x="0.0" y="0.0" width="314" height="291"/>
@@ -177,7 +181,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIY-1n-37X">
                                     <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
                                     <connections>
-                                        <action selector="repoUrlButtonAction" destination="-1" eventType="touchUpInside" id="AJd-jh-it4"/>
+                                        <action selector="repoUrlButtonAction" destination="-1" eventType="touchUpInside" id="X8a-a0-FeW"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -221,18 +225,60 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <integer key="value" value="16"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="colorSet" value="objectBackground"/>
                     </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHd-Ls-Cyg">
+                    <rect key="frame" x="0.0" y="706" width="414" height="190"/>
+                    <subviews>
+                        <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LBb-dA-iod">
+                            <rect key="frame" x="0.0" y="22" width="414" height="168"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <gestureRecognizers/>
+                            <wkWebViewConfiguration key="configuration">
+                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                <wkPreferences key="preferences"/>
+                            </wkWebViewConfiguration>
+                        </wkWebView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmb-Z5-jfA">
+                            <rect key="frame" x="185" y="0.0" width="44" height="44"/>
+                            <color key="backgroundColor" red="0.99888390299999996" green="0.0022462564159999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="I3k-x6-pek"/>
+                                <constraint firstAttribute="height" constant="44" id="ROs-uC-YnC"/>
+                            </constraints>
+                            <connections>
+                                <action selector="webViewButtonActionWithSender:" destination="-1" eventType="touchUpInside" id="kcn-YO-vMj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="LBb-dA-iod" firstAttribute="top" secondItem="Mmb-Z5-jfA" secondAttribute="bottom" constant="-22" id="Zxz-fE-hc2"/>
+                        <constraint firstItem="LBb-dA-iod" firstAttribute="leading" secondItem="SHd-Ls-Cyg" secondAttribute="leading" id="dFw-Py-a8u"/>
+                        <constraint firstItem="Mmb-Z5-jfA" firstAttribute="top" secondItem="SHd-Ls-Cyg" secondAttribute="top" id="jCP-oT-W24"/>
+                        <constraint firstAttribute="bottom" secondItem="LBb-dA-iod" secondAttribute="bottom" id="qcS-Ds-LLq"/>
+                        <constraint firstAttribute="trailing" secondItem="LBb-dA-iod" secondAttribute="trailing" id="rHV-7v-bWz"/>
+                        <constraint firstItem="Mmb-Z5-jfA" firstAttribute="centerX" secondItem="SHd-Ls-Cyg" secondAttribute="centerX" id="rVI-eW-LV3"/>
+                        <constraint firstAttribute="height" constant="190" id="z5N-q8-UPG"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" name="Background"/>
             <constraints>
                 <constraint firstItem="URU-wc-Iw3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="C7m-8v-BQl"/>
-                <constraint firstItem="1Xy-IX-Nk2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="CiL-S6-ilA"/>
+                <constraint firstItem="1Xy-IX-Nk2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-10" id="CiL-S6-ilA"/>
                 <constraint firstAttribute="trailing" secondItem="URU-wc-Iw3" secondAttribute="trailing" constant="50" id="JmC-Oo-WQl"/>
-                <constraint firstItem="URU-wc-Iw3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="ZQM-7g-OE0"/>
+                <constraint firstItem="URU-wc-Iw3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="ZQM-7g-OE0"/>
                 <constraint firstItem="1Xy-IX-Nk2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="emq-sa-igM"/>
+                <constraint firstAttribute="bottom" secondItem="SHd-Ls-Cyg" secondAttribute="bottom" id="gd5-r1-F4b"/>
+                <constraint firstItem="SHd-Ls-Cyg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rhB-RU-8s4"/>
+                <constraint firstAttribute="trailing" secondItem="SHd-Ls-Cyg" secondAttribute="trailing" id="uj1-jl-1i1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="colorSet" value="background"/>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </view>
     </objects>
