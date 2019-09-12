@@ -14,18 +14,26 @@ final class ListViewController: UIViewController {
     @IBOutlet private var toolBarView: ToolBarView!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
-    private var viewModel: ListViewModel?
+    private var viewModel: ListViewModel
+    
+    init(viewModel: ListViewModel = ListViewModel()) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewModel = ListViewModel()
+        
         fetchData()
     }
 
     private func fetchData() {
         activityIndicator.startAnimating()
-        viewModel?.fetchData(completion: { [weak self] error in
+        viewModel.fetchData(completion: { [weak self] error in
             self?.activityIndicator.stopAnimating()
             if let error = error {
                 self?.showAlert(withTitle: error.message)
@@ -43,7 +51,7 @@ final class ListViewController: UIViewController {
     }
     
     private func presentData() {
-        toolBarView.changeCounterValue(viewModel?.repoCounter ?? 0)
+        toolBarView.changeCounterValue(viewModel.repoCounter)
         showTable()
     }
     
@@ -51,31 +59,31 @@ final class ListViewController: UIViewController {
         let tableListViewController = TableListViewController()
         addChild(tableListViewController)
         
-        let tableListView = tableListViewController.view ?? UIView()
+        guard let tableListView = tableListViewController.view else { return }
         containerView.addSubview(tableListView)
         tableListView.fill(view: containerView)
         
         tableListViewController.delegate = self
-        tableListViewController.data = viewModel?.reposList ?? []
+        tableListViewController.data = viewModel.reposList
     }
 }
 
 extension ListViewController: TableListViewControllerDelegate {
     func refreshData(completion: @escaping () -> ()) {
-        viewModel?.fetchData(completion: { [weak self] error in
+        viewModel.fetchData(completion: { [weak self] error in
             if let error = error {
                 self?.showAlert(withTitle: error.message)
             } else {
                 completion()
-                self?.toolBarView.changeCounterValue(self?.viewModel?.repoCounter ?? 0)
+                self?.toolBarView.changeCounterValue(self?.viewModel.repoCounter ?? 0)
             }
         })
     }
     
     func selectedRepo(atIndex index: IndexPath) {
-        let detailsViewController = DetailsViewController(nibName: DetailsViewController.toString(), bundle: nil)
+        let detailsViewController = DetailsViewController()
         detailsViewController.modalTransitionStyle = .crossDissolve
-        detailsViewController.repoItem = viewModel?.reposList[index.row]
+        detailsViewController.repoItem = viewModel.reposList[index.row]
         present(detailsViewController, animated: true)
     }
 }

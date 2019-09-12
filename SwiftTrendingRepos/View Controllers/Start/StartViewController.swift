@@ -10,9 +10,8 @@ import UIKit
 
 final class StartViewController: UIViewController {
     
-    
     @IBAction func buttonAction() {
-        let listViewController = ListViewController(nibName: ListViewController.toString(), bundle: nil)
+        let listViewController = ListViewController()
         listViewController.modalTransitionStyle = .crossDissolve
         present(listViewController, animated: true)
     }
