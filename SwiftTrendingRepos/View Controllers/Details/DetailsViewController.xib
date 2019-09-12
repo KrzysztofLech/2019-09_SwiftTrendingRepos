@@ -13,15 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="SwiftTrendingRepos" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="mrI-2I-FMC" id="Ppf-cS-VyI"/>
-                <outlet property="authorLabel" destination="amy-Zp-s0X" id="tvA-1u-l4r"/>
-                <outlet property="avatarImageView" destination="kIn-jO-VZf" id="mqK-gA-u5K"/>
-                <outlet property="descriptionLabel" destination="YXz-3N-qS3" id="iEN-Of-5Z7"/>
-                <outlet property="forksLabel" destination="qDh-ZC-Hyf" id="q7k-Aw-26j"/>
-                <outlet property="repoDetailsView" destination="URU-wc-Iw3" id="Mlh-IC-mEW"/>
-                <outlet property="repoNameLabel" destination="4ka-wb-hjW" id="wc0-vi-2qO"/>
-                <outlet property="repoUrlLabel" destination="Mbl-Z0-WzZ" id="Mit-Tv-dfg"/>
-                <outlet property="starsLabel" destination="uqH-pb-T56" id="IsN-9z-K6j"/>
+                <outlet property="repoDetailsView" destination="URU-wc-Iw3" id="haa-oU-DN0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webView" destination="LBb-dA-iod" id="f2e-Ue-MSB"/>
                 <outlet property="webViewContainerBottomConstrait" destination="gd5-r1-F4b" id="l2V-cu-KrJ"/>
@@ -46,7 +38,7 @@
                         <action selector="closeButtonAction" destination="-1" eventType="touchUpInside" id="elV-P5-Skb"/>
                     </connections>
                 </button>
-                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URU-wc-Iw3" customClass="GradientView" customModule="SwiftTrendingRepos" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URU-wc-Iw3" customClass="DetailsView" customModule="SwiftTrendingRepos" customModuleProvider="target">
                     <rect key="frame" x="50" y="84" width="314" height="460.5"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lsb-Ii-BtO" userLabel="Author View">
@@ -181,7 +173,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIY-1n-37X">
                                     <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
                                     <connections>
-                                        <action selector="repoUrlButtonAction" destination="-1" eventType="touchUpInside" id="X8a-a0-FeW"/>
+                                        <action selector="repoUrlButtonAction" destination="URU-wc-Iw3" eventType="touchUpInside" id="2fe-Zn-9YX"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -221,12 +213,16 @@
                         <constraint firstItem="4ka-wb-hjW" firstAttribute="leading" secondItem="URU-wc-Iw3" secondAttribute="leading" constant="16" id="we5-bM-DRv"/>
                         <constraint firstAttribute="trailing" secondItem="4ka-wb-hjW" secondAttribute="trailing" constant="16" id="wxx-fU-phv"/>
                     </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <integer key="value" value="16"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="string" keyPath="colorSet" value="objectBackground"/>
-                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="activityIndicator" destination="mrI-2I-FMC" id="nym-qe-uOI"/>
+                        <outlet property="authorLabel" destination="amy-Zp-s0X" id="wOQ-EJ-R7y"/>
+                        <outlet property="avatarImageView" destination="kIn-jO-VZf" id="EhO-YA-6jB"/>
+                        <outlet property="descriptionLabel" destination="YXz-3N-qS3" id="Lrl-7b-0OU"/>
+                        <outlet property="forksLabel" destination="qDh-ZC-Hyf" id="rck-Hw-4QK"/>
+                        <outlet property="repoNameLabel" destination="4ka-wb-hjW" id="Ad1-H6-GRc"/>
+                        <outlet property="repoUrlLabel" destination="Mbl-Z0-WzZ" id="zVe-V5-64v"/>
+                        <outlet property="starsLabel" destination="uqH-pb-T56" id="Qjd-Dy-fcO"/>
+                    </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHd-Ls-Cyg">
                     <rect key="frame" x="0.0" y="706" width="414" height="190"/>

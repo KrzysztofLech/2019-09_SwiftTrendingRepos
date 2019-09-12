@@ -36,13 +36,16 @@ import UIKit
 
 class GradientView: UIView {
     
-    @IBInspectable var colorSet: String = ""
+    @IBInspectable var colorSet: String = "" {
+        didSet {
+            gradientSet = GradientSet(rawValue: colorSet) ?? .background
+        }
+    }
+    
+    var gradientSet = GradientSet.objectBackground
     
     override func draw(_ rect: CGRect) {
-        guard
-            let context = UIGraphicsGetCurrentContext(),
-            let gradientSet = GradientSet(rawValue: colorSet)
-            else { return }
+        guard let context = UIGraphicsGetCurrentContext() else { return }
         
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let colors = [gradientSet.startColor, gradientSet.endColor]
