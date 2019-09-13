@@ -17,6 +17,14 @@ class ToolBarView: UIView {
         animateCounter()
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        layer.shadowOffset = CGSize(width: 0, height: 10)
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 10
+    }
+    
     private func animateCounter() {
         UIView.animate(withDuration: 0.15, animations: {
             self.counterLabel.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)

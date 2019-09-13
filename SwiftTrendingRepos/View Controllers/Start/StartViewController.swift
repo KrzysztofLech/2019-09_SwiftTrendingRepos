@@ -10,7 +10,13 @@ import UIKit
 
 final class StartViewController: UIViewController {
     
-    @IBAction func buttonAction() {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigateToListScreen()
+    }
+    
+    private func navigateToListScreen() {
         let listViewController = ListViewController()
         listViewController.modalTransitionStyle = .crossDissolve
         present(listViewController, animated: true)

@@ -20,38 +20,10 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="GradientView" customModule="SwiftTrendingRepos" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NW8-HS-1IX" userLabel="Tool Bar" customClass="ToolBarView" customModule="SwiftTrendingRepos" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repositories:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-2n-71S">
-                            <rect key="frame" x="20" y="19.5" width="105" height="21"/>
-                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0X-Uv-1rO">
-                            <rect key="frame" x="130" y="19.5" width="11" height="21"/>
-                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.3148589691558441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstItem="y0X-Uv-1rO" firstAttribute="leading" secondItem="CbH-2n-71S" secondAttribute="trailing" constant="5" id="4yN-nK-ATz"/>
-                        <constraint firstItem="y0X-Uv-1rO" firstAttribute="centerY" secondItem="CbH-2n-71S" secondAttribute="centerY" id="YSF-pw-oFg"/>
-                        <constraint firstAttribute="height" constant="60" id="azn-Sq-cYe"/>
-                        <constraint firstItem="CbH-2n-71S" firstAttribute="centerY" secondItem="NW8-HS-1IX" secondAttribute="centerY" id="oQW-hx-ftO"/>
-                        <constraint firstItem="CbH-2n-71S" firstAttribute="leading" secondItem="NW8-HS-1IX" secondAttribute="leading" constant="20" id="qdT-ho-T5I"/>
-                    </constraints>
-                    <connections>
-                        <outlet property="counterLabel" destination="y0X-Uv-1rO" id="yoh-uv-5Vk"/>
-                    </connections>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSS-O4-whi">
                     <rect key="frame" x="0.0" y="104" width="414" height="792"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,25 +31,78 @@
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5Ld-LW-90H">
                     <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                 </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NW8-HS-1IX" userLabel="Tool Bar" customClass="ToolBarView" customModule="SwiftTrendingRepos" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="githubAvatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="X5E-eC-uog" userLabel="Githyb Logo">
+                            <rect key="frame" x="20" y="10" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="X5E-eC-uog" secondAttribute="height" multiplier="1:1" id="9dW-wp-aQX"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repositories:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-2n-71S">
+                            <rect key="frame" x="70" y="19.5" width="105" height="21"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0X-Uv-1rO">
+                            <rect key="frame" x="180" y="19.5" width="11" height="21"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="Tool Bar Background"/>
+                    <constraints>
+                        <constraint firstItem="y0X-Uv-1rO" firstAttribute="leading" secondItem="CbH-2n-71S" secondAttribute="trailing" constant="5" id="4yN-nK-ATz"/>
+                        <constraint firstAttribute="bottom" secondItem="X5E-eC-uog" secondAttribute="bottom" constant="10" id="7lJ-5M-45z"/>
+                        <constraint firstItem="CbH-2n-71S" firstAttribute="leading" secondItem="X5E-eC-uog" secondAttribute="trailing" constant="10" id="926-BG-DQn"/>
+                        <constraint firstItem="y0X-Uv-1rO" firstAttribute="centerY" secondItem="CbH-2n-71S" secondAttribute="centerY" id="YSF-pw-oFg"/>
+                        <constraint firstItem="X5E-eC-uog" firstAttribute="top" secondItem="NW8-HS-1IX" secondAttribute="top" constant="10" id="YeF-7m-muu"/>
+                        <constraint firstAttribute="height" constant="60" id="azn-Sq-cYe"/>
+                        <constraint firstItem="X5E-eC-uog" firstAttribute="leading" secondItem="NW8-HS-1IX" secondAttribute="leading" constant="20" id="eci-Ug-gCL"/>
+                        <constraint firstItem="CbH-2n-71S" firstAttribute="centerY" secondItem="NW8-HS-1IX" secondAttribute="centerY" id="oQW-hx-ftO"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="colorSet" value="toolBarBackground"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="counterLabel" destination="y0X-Uv-1rO" id="yoh-uv-5Vk"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnm-qf-2Fa" userLabel="Status Bar Background">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <color key="backgroundColor" name="Tool Bar Background"/>
+                </view>
             </subviews>
-            <color key="backgroundColor" name="Background"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="cSS-O4-whi" secondAttribute="bottom" id="3Tw-mN-B6I"/>
                 <constraint firstItem="5Ld-LW-90H" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9PE-ok-ukT"/>
+                <constraint firstAttribute="trailing" secondItem="Wnm-qf-2Fa" secondAttribute="trailing" id="AxD-c7-q2E"/>
                 <constraint firstItem="NW8-HS-1IX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cdi-X1-1Zh"/>
                 <constraint firstAttribute="trailing" secondItem="cSS-O4-whi" secondAttribute="trailing" id="K8l-Kq-m79"/>
+                <constraint firstItem="Wnm-qf-2Fa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OEX-mT-VIw"/>
                 <constraint firstItem="5Ld-LW-90H" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TNd-qw-2Fg"/>
                 <constraint firstItem="NW8-HS-1IX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ToJ-pu-VfH"/>
                 <constraint firstItem="cSS-O4-whi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Vw8-gd-vfV"/>
+                <constraint firstItem="Wnm-qf-2Fa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="g6N-tK-bcp"/>
                 <constraint firstAttribute="trailing" secondItem="NW8-HS-1IX" secondAttribute="trailing" id="vwH-NQ-LRt"/>
                 <constraint firstItem="cSS-O4-whi" firstAttribute="top" secondItem="NW8-HS-1IX" secondAttribute="bottom" id="xV9-72-On9"/>
+                <constraint firstItem="NW8-HS-1IX" firstAttribute="top" secondItem="Wnm-qf-2Fa" secondAttribute="bottom" id="zT5-6p-qUn"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="colorSet" value="background"/>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="Background">
-            <color red="0.0" green="0.0" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="githubAvatarPlaceholder" width="50" height="50"/>
+        <namedColor name="Tool Bar Background">
+            <color red="0.21176470588235294" green="0.21176470588235294" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -36,7 +36,7 @@ final class SimpleTableViewCell: UITableViewCell {
     private func setup() {
         containerView.layer.cornerRadius = 8
         containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = UIColor.darkGray.cgColor
+        containerView.layer.borderColor = Colors.textLight?.cgColor
         
         avatarImageView.layer.cornerRadius = avatarImageView.bounds.height / 2
     }

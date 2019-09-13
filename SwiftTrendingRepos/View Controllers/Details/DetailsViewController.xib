@@ -27,19 +27,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xy-IX-Nk2" userLabel="Back Button">
-                    <rect key="frame" x="0.0" y="34" width="80" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="80" id="PyZ-ve-cDw"/>
-                        <constraint firstAttribute="height" constant="50" id="fbJ-vt-VVA"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="Back"/>
-                    <connections>
-                        <action selector="closeButtonAction" destination="-1" eventType="touchUpInside" id="elV-P5-Skb"/>
-                    </connections>
-                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URU-wc-Iw3" customClass="DetailsView" customModule="SwiftTrendingRepos" customModuleProvider="target">
                     <rect key="frame" x="50" y="84" width="275" height="421"/>
                     <subviews>
@@ -281,6 +268,19 @@
                         <constraint firstAttribute="height" constant="190" id="z5N-q8-UPG"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xy-IX-Nk2" userLabel="Back Button">
+                    <rect key="frame" x="0.0" y="34" width="80" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="PyZ-ve-cDw"/>
+                        <constraint firstAttribute="height" constant="50" id="fbJ-vt-VVA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Back"/>
+                    <connections>
+                        <action selector="closeButtonAction" destination="-1" eventType="touchUpInside" id="elV-P5-Skb"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>

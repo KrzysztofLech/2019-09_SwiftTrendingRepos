@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFa-tl-ZV5">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFa-tl-ZV5" customClass="GradientView" customModule="SwiftTrendingRepos" customModuleProvider="target">
                         <rect key="frame" x="10" y="10.5" width="394" height="70"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gz-8l-zoA">
@@ -83,7 +82,7 @@
                     <constraint firstItem="OFa-tl-ZV5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wm2-ZB-VTK"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" name="Background"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="activityIndicator" destination="kAc-Cy-snJ" id="GEC-lX-2Uv"/>
                 <outlet property="authorLabel" destination="KXy-cM-4qr" id="WYG-1u-ixY"/>
@@ -97,8 +96,5 @@
     </objects>
     <resources>
         <image name="icon_star" width="14" height="13"/>
-        <namedColor name="Background">
-            <color red="0.0" green="0.0" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>

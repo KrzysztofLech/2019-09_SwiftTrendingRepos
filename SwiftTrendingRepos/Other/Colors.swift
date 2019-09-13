@@ -11,4 +11,5 @@ import UIKit
 struct Colors {
     static let background = UIColor(named: "Background")
     static let textLight = UIColor(named: "Text - light")
+    static let toolBarBackground = UIColor(named: "Tool Bar Background")
 }

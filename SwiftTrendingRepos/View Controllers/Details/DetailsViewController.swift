@@ -25,7 +25,7 @@ class DetailsViewController: UIViewController {
         return UIScreen.main.bounds.height - repoDetailsView.frame.origin.y - repoDetailsView.bounds.height - repoDetailsView.frame.origin.x
     }()
     private lazy var maximumWebViewHeight: CGFloat = {
-        return UIScreen.main.bounds.height - repoDetailsView.frame.origin.y + 30
+        return UIScreen.main.bounds.height - repoDetailsView.frame.origin.y + 34
     }()
     
     init(imageService: ImageServiceProtocol = ImageService()) {
