@@ -52,21 +52,32 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubg-Ip-R1X" userLabel="Change Layout Button">
+                            <rect key="frame" x="340" y="0.0" width="54" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="54" id="2IA-Xs-wwJ"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="icon_layout"/>
+                            <connections>
+                                <action selector="changeLayoutButtonAction" destination="NW8-HS-1IX" eventType="touchUpInside" id="iOq-Qj-7P5"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" name="Tool Bar Background"/>
                     <constraints>
                         <constraint firstItem="y0X-Uv-1rO" firstAttribute="leading" secondItem="CbH-2n-71S" secondAttribute="trailing" constant="5" id="4yN-nK-ATz"/>
                         <constraint firstAttribute="bottom" secondItem="X5E-eC-uog" secondAttribute="bottom" constant="10" id="7lJ-5M-45z"/>
                         <constraint firstItem="CbH-2n-71S" firstAttribute="leading" secondItem="X5E-eC-uog" secondAttribute="trailing" constant="10" id="926-BG-DQn"/>
+                        <constraint firstAttribute="trailing" secondItem="ubg-Ip-R1X" secondAttribute="trailing" constant="20" id="A0D-6e-pOJ"/>
+                        <constraint firstAttribute="bottom" secondItem="ubg-Ip-R1X" secondAttribute="bottom" id="DS8-S3-b3K"/>
                         <constraint firstItem="y0X-Uv-1rO" firstAttribute="centerY" secondItem="CbH-2n-71S" secondAttribute="centerY" id="YSF-pw-oFg"/>
                         <constraint firstItem="X5E-eC-uog" firstAttribute="top" secondItem="NW8-HS-1IX" secondAttribute="top" constant="10" id="YeF-7m-muu"/>
                         <constraint firstAttribute="height" constant="60" id="azn-Sq-cYe"/>
                         <constraint firstItem="X5E-eC-uog" firstAttribute="leading" secondItem="NW8-HS-1IX" secondAttribute="leading" constant="20" id="eci-Ug-gCL"/>
+                        <constraint firstItem="ubg-Ip-R1X" firstAttribute="top" secondItem="NW8-HS-1IX" secondAttribute="top" id="jDJ-F1-mub"/>
                         <constraint firstItem="CbH-2n-71S" firstAttribute="centerY" secondItem="NW8-HS-1IX" secondAttribute="centerY" id="oQW-hx-ftO"/>
                     </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="colorSet" value="toolBarBackground"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="counterLabel" destination="y0X-Uv-1rO" id="yoh-uv-5Vk"/>
                     </connections>
@@ -101,6 +112,7 @@
     </objects>
     <resources>
         <image name="githubAvatarPlaceholder" width="50" height="50"/>
+        <image name="icon_layout" width="44" height="36"/>
         <namedColor name="Tool Bar Background">
             <color red="0.21176470588235294" green="0.21176470588235294" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

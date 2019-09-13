@@ -30,6 +30,7 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        toolBarView.delegate = self
         fetchData()
     }
 
@@ -67,6 +68,11 @@ final class ListViewController: UIViewController {
         
         tableListViewController.delegate = self
         tableListViewController.data = viewModel.reposList
+    }
+}
+extension ListViewController: ToolBarViewDelegate {
+    func changeLayoutButtonTapped() {
+        print("Tapped!")
     }
 }
 

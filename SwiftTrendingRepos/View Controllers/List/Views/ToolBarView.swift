@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol ToolBarViewDelegate: AnyObject {
+    func changeLayoutButtonTapped()
+}
+
 class ToolBarView: UIView {
     
     @IBOutlet private var counterLabel: UILabel!
+    weak var delegate: ToolBarViewDelegate?
     
     func changeCounterValue(_ value: Int) {
         counterLabel.text = String(value)
@@ -33,5 +38,9 @@ class ToolBarView: UIView {
                 self.counterLabel.transform = CGAffineTransform.identity
             }
         }
+    }
+    
+    @IBAction func changeLayoutButtonAction() {
+        delegate?.changeLayoutButtonTapped()
     }
 }
