@@ -14,7 +14,7 @@ final class ListViewController: UIViewController {
     @IBOutlet private var toolBarView: ToolBarView!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
-    private var viewModel: ListViewModel
+    private let viewModel: ListViewModel
     
     init(viewModel: ListViewModel = ListViewModel()) {
         self.viewModel = viewModel

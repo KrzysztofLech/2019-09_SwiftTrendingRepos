@@ -15,7 +15,7 @@ protocol ImageServiceProtocol {
 
 final class ImageService: ImageServiceProtocol {
     
-    private var apiServiceWorker: ApiServiceWorkerProtocol
+    private let apiServiceWorker: ApiServiceWorkerProtocol
     
     init(apiServiceWorker: ApiServiceWorkerProtocol = ApiServiceWorker()) {
         self.apiServiceWorker = apiServiceWorker

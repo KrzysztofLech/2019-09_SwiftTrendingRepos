@@ -20,13 +20,21 @@ final class TableListViewController: UIViewController {
     var data: [GithubRepoViewModel] = []
     weak var delegate: TableListViewControllerDelegate?
     
-    private var imageService: ImageServiceProtocol?
+    private let imageService: ImageServiceProtocol
     private let refreshControl = UIRefreshControl()
+    
+    init(imageService: ImageServiceProtocol = ImageService()) {
+        self.imageService = imageService
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageService = ImageService()
         setupTableView()
     }
     
@@ -54,7 +62,7 @@ extension TableListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTableViewCell.toString(), for: indexPath) as? SimpleTableViewCell else { return UITableViewCell() }
         let cellData = data[indexPath.row]
         cell.configure(withData: cellData)
-        imageService?.getImage(url: cellData.avatarUrl) { image in
+        imageService.getImage(url: cellData.avatarUrl) { image in
             cell.setupAvatarImage(image)
         }
         return cell

@@ -17,7 +17,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet private var webViewContainerBottomConstrait: NSLayoutConstraint!
     
     var repoItem: GithubRepoViewModel?
-    private var imageService: ImageServiceProtocol
+    private let imageService: ImageServiceProtocol
     
     private var isWebViewPresented = false
     private lazy var compactWebViewHeight: CGFloat = {
