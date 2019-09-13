@@ -13,6 +13,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet private var repoDetailsView: DetailsView!
     @IBOutlet private var webViewContainerView: UIView!
     @IBOutlet private var webView: WKWebView!
+    @IBOutlet private var webViewButton: UIButton!
     @IBOutlet private var webViewContainerHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var webViewContainerBottomConstrait: NSLayoutConstraint!
     
@@ -24,7 +25,7 @@ class DetailsViewController: UIViewController {
         return UIScreen.main.bounds.height - repoDetailsView.frame.origin.y - repoDetailsView.bounds.height - repoDetailsView.frame.origin.x
     }()
     private lazy var maximumWebViewHeight: CGFloat = {
-        return UIScreen.main.bounds.height - repoDetailsView.frame.origin.y + 22
+        return UIScreen.main.bounds.height - repoDetailsView.frame.origin.y + 30
     }()
     
     init(imageService: ImageServiceProtocol = ImageService()) {
@@ -93,8 +94,10 @@ class DetailsViewController: UIViewController {
     }
     
     private func animateView(withDuration duration: Double) {
+        let transform = isWebViewPresented ? CGAffineTransform(rotationAngle: .pi) : CGAffineTransform.identity
         UIView.animate(withDuration: duration, delay: 0.0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
+            self.webViewButton.transform = transform
         })
     }
 }
