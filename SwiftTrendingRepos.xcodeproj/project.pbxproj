@@ -323,9 +323,9 @@
 		6B5A09192323D48F001CBC10 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				6B761F96232CE75C00FDE3FD /* Large */,
-				6B761F95232CE75100FDE3FD /* Simple */,
-				6B761F97232CE77600FDE3FD /* Compact */,
+				6B761F96232CE75C00FDE3FD /* Large Size */,
+				6B761F95232CE75100FDE3FD /* Regular Size */,
+				6B761F97232CE77600FDE3FD /* Compact Size */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -374,31 +374,31 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		6B761F95232CE75100FDE3FD /* Simple */ = {
+		6B761F95232CE75100FDE3FD /* Regular Size */ = {
 			isa = PBXGroup;
 			children = (
 				6B5A091A2323D4CF001CBC10 /* RegularTableViewCell.swift */,
 				6B5A091B2323D4CF001CBC10 /* RegularTableViewCell.xib */,
 			);
-			path = Simple;
+			path = "Regular Size";
 			sourceTree = "<group>";
 		};
-		6B761F96232CE75C00FDE3FD /* Large */ = {
+		6B761F96232CE75C00FDE3FD /* Large Size */ = {
 			isa = PBXGroup;
 			children = (
 				6B761F98232CE7F800FDE3FD /* LargeTableViewCell.swift */,
 				6B761F99232CE7F800FDE3FD /* LargeTableViewCell.xib */,
 			);
-			path = Large;
+			path = "Large Size";
 			sourceTree = "<group>";
 		};
-		6B761F97232CE77600FDE3FD /* Compact */ = {
+		6B761F97232CE77600FDE3FD /* Compact Size */ = {
 			isa = PBXGroup;
 			children = (
 				6B761F9C232CE80800FDE3FD /* CompactTableViewCell.swift */,
 				6B761F9D232CE80800FDE3FD /* CompactTableViewCell.xib */,
 			);
-			path = Compact;
+			path = "Compact Size";
 			sourceTree = "<group>";
 		};
 		6B761FA0232CEA9500FDE3FD /* Views */ = {
