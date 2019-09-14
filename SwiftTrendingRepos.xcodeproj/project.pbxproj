@@ -31,8 +31,8 @@
 		6B5A09142323CB01001CBC10 /* TableListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A09122323CB01001CBC10 /* TableListViewController.xib */; };
 		6B5A09162323CB9B001CBC10 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A09152323CB9B001CBC10 /* Colors.xcassets */; };
 		6B5A09182323CC3F001CBC10 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A09172323CC3F001CBC10 /* Colors.swift */; };
-		6B5A091C2323D4CF001CBC10 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A091A2323D4CF001CBC10 /* SimpleTableViewCell.swift */; };
-		6B5A091D2323D4CF001CBC10 /* SimpleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A091B2323D4CF001CBC10 /* SimpleTableViewCell.xib */; };
+		6B5A091C2323D4CF001CBC10 /* RegularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A091A2323D4CF001CBC10 /* RegularTableViewCell.swift */; };
+		6B5A091D2323D4CF001CBC10 /* RegularTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A091B2323D4CF001CBC10 /* RegularTableViewCell.xib */; };
 		6B5A091F2323DA9B001CBC10 /* UITableView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A091E2323DA9B001CBC10 /* UITableView+extensions.swift */; };
 		6B5A0921232412F1001CBC10 /* GithubRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A0920232412F1001CBC10 /* GithubRepoViewModel.swift */; };
 		6B5A092323241410001CBC10 /* Int+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A092223241410001CBC10 /* Int+extensions.swift */; };
@@ -49,6 +49,13 @@
 		6B761F8D232CBEC000FDE3FD /* VariedListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B761F8B232CBEC000FDE3FD /* VariedListViewController.xib */; };
 		6B761F90232CC47300FDE3FD /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761F8F232CC47300FDE3FD /* Presentable.swift */; };
 		6B761F92232CC9A800FDE3FD /* TableListViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761F91232CC9A800FDE3FD /* TableListViewControllerDelegate.swift */; };
+		6B761F94232CE40400FDE3FD /* PresentableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761F93232CE40400FDE3FD /* PresentableCell.swift */; };
+		6B761F9A232CE7F800FDE3FD /* LargeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761F98232CE7F800FDE3FD /* LargeTableViewCell.swift */; };
+		6B761F9B232CE7F800FDE3FD /* LargeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B761F99232CE7F800FDE3FD /* LargeTableViewCell.xib */; };
+		6B761F9E232CE80800FDE3FD /* CompactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761F9C232CE80800FDE3FD /* CompactTableViewCell.swift */; };
+		6B761F9F232CE80800FDE3FD /* CompactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B761F9D232CE80800FDE3FD /* CompactTableViewCell.xib */; };
+		6B761FA2232CEAB400FDE3FD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761FA1232CEAB400FDE3FD /* HeaderView.swift */; };
+		6B761FA4232CEAC000FDE3FD /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B761FA3232CEAC000FDE3FD /* HeaderView.xib */; };
 		6BADB3BC23254B790030245B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BADB3BA23254B790030245B /* DetailsViewController.swift */; };
 		6BADB3BD23254B790030245B /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BADB3BB23254B790030245B /* DetailsViewController.xib */; };
 		6BE59895232177FE007C45EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE59894232177FE007C45EC /* AppDelegate.swift */; };
@@ -80,8 +87,8 @@
 		6B5A09122323CB01001CBC10 /* TableListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableListViewController.xib; sourceTree = "<group>"; };
 		6B5A09152323CB9B001CBC10 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		6B5A09172323CC3F001CBC10 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		6B5A091A2323D4CF001CBC10 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
-		6B5A091B2323D4CF001CBC10 /* SimpleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTableViewCell.xib; sourceTree = "<group>"; };
+		6B5A091A2323D4CF001CBC10 /* RegularTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTableViewCell.swift; sourceTree = "<group>"; };
+		6B5A091B2323D4CF001CBC10 /* RegularTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegularTableViewCell.xib; sourceTree = "<group>"; };
 		6B5A091E2323DA9B001CBC10 /* UITableView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extensions.swift"; sourceTree = "<group>"; };
 		6B5A0920232412F1001CBC10 /* GithubRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoViewModel.swift; sourceTree = "<group>"; };
 		6B5A092223241410001CBC10 /* Int+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+extensions.swift"; sourceTree = "<group>"; };
@@ -98,6 +105,13 @@
 		6B761F8B232CBEC000FDE3FD /* VariedListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VariedListViewController.xib; sourceTree = "<group>"; };
 		6B761F8F232CC47300FDE3FD /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		6B761F91232CC9A800FDE3FD /* TableListViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListViewControllerDelegate.swift; sourceTree = "<group>"; };
+		6B761F93232CE40400FDE3FD /* PresentableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableCell.swift; sourceTree = "<group>"; };
+		6B761F98232CE7F800FDE3FD /* LargeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTableViewCell.swift; sourceTree = "<group>"; };
+		6B761F99232CE7F800FDE3FD /* LargeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LargeTableViewCell.xib; sourceTree = "<group>"; };
+		6B761F9C232CE80800FDE3FD /* CompactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactTableViewCell.swift; sourceTree = "<group>"; };
+		6B761F9D232CE80800FDE3FD /* CompactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompactTableViewCell.xib; sourceTree = "<group>"; };
+		6B761FA1232CEAB400FDE3FD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		6B761FA3232CEAC000FDE3FD /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		6BADB3BA23254B790030245B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		6BADB3BB23254B790030245B /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		6BE59891232177FE007C45EC /* SwiftTrendingRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTrendingRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -298,6 +312,7 @@
 		6B5A09102323CAC3001CBC10 /* Table List */ = {
 			isa = PBXGroup;
 			children = (
+				6B761FA0232CEA9500FDE3FD /* Views */,
 				6B5A09192323D48F001CBC10 /* Cells */,
 				6B5A09112323CB01001CBC10 /* TableListViewController.swift */,
 				6B5A09122323CB01001CBC10 /* TableListViewController.xib */,
@@ -308,8 +323,9 @@
 		6B5A09192323D48F001CBC10 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				6B5A091A2323D4CF001CBC10 /* SimpleTableViewCell.swift */,
-				6B5A091B2323D4CF001CBC10 /* SimpleTableViewCell.xib */,
+				6B761F96232CE75C00FDE3FD /* Large */,
+				6B761F95232CE75100FDE3FD /* Simple */,
+				6B761F97232CE77600FDE3FD /* Compact */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -353,8 +369,45 @@
 			children = (
 				6B761F8F232CC47300FDE3FD /* Presentable.swift */,
 				6B761F91232CC9A800FDE3FD /* TableListViewControllerDelegate.swift */,
+				6B761F93232CE40400FDE3FD /* PresentableCell.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6B761F95232CE75100FDE3FD /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				6B5A091A2323D4CF001CBC10 /* RegularTableViewCell.swift */,
+				6B5A091B2323D4CF001CBC10 /* RegularTableViewCell.xib */,
+			);
+			path = Simple;
+			sourceTree = "<group>";
+		};
+		6B761F96232CE75C00FDE3FD /* Large */ = {
+			isa = PBXGroup;
+			children = (
+				6B761F98232CE7F800FDE3FD /* LargeTableViewCell.swift */,
+				6B761F99232CE7F800FDE3FD /* LargeTableViewCell.xib */,
+			);
+			path = Large;
+			sourceTree = "<group>";
+		};
+		6B761F97232CE77600FDE3FD /* Compact */ = {
+			isa = PBXGroup;
+			children = (
+				6B761F9C232CE80800FDE3FD /* CompactTableViewCell.swift */,
+				6B761F9D232CE80800FDE3FD /* CompactTableViewCell.xib */,
+			);
+			path = Compact;
+			sourceTree = "<group>";
+		};
+		6B761FA0232CEA9500FDE3FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B761FA1232CEAB400FDE3FD /* HeaderView.swift */,
+				6B761FA3232CEAC000FDE3FD /* HeaderView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6BE59888232177FE007C45EC = {
@@ -446,7 +499,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B1D9B272321804500D02121 /* LaunchScreen.storyboard in Resources */,
-				6B5A091D2323D4CF001CBC10 /* SimpleTableViewCell.xib in Resources */,
+				6B761F9B232CE7F800FDE3FD /* LargeTableViewCell.xib in Resources */,
+				6B761F9F232CE80800FDE3FD /* CompactTableViewCell.xib in Resources */,
+				6B761FA4232CEAC000FDE3FD /* HeaderView.xib in Resources */,
+				6B5A091D2323D4CF001CBC10 /* RegularTableViewCell.xib in Resources */,
 				6BE5989C232177FF007C45EC /* Assets.xcassets in Resources */,
 				6B5A09142323CB01001CBC10 /* TableListViewController.xib in Resources */,
 				6B5A09162323CB9B001CBC10 /* Colors.xcassets in Resources */,
@@ -477,7 +533,9 @@
 				6B7473D22323B36B006BBC20 /* UIView+extensions.swift in Sources */,
 				6B7473D92323BF49006BBC20 /* Alert.swift in Sources */,
 				6B1D9B5323218B7E00D02121 /* URLRequestExtension.swift in Sources */,
+				6B761F94232CE40400FDE3FD /* PresentableCell.swift in Sources */,
 				6B1D9B5823218B7E00D02121 /* ApiService.swift in Sources */,
+				6B761F9E232CE80800FDE3FD /* CompactTableViewCell.swift in Sources */,
 				6B5A092823243D65001CBC10 /* ImageService.swift in Sources */,
 				6B1D9B5423218B7E00D02121 /* ApiServiceWorker.swift in Sources */,
 				6B1D9B5523218B7E00D02121 /* ServiceProtocol.swift in Sources */,
@@ -489,16 +547,18 @@
 				6B1D9B4B23218B7E00D02121 /* ParametersEncoding.swift in Sources */,
 				6B5A09132323CB01001CBC10 /* TableListViewController.swift in Sources */,
 				6B7473D32323B36B006BBC20 /* UIViewController+extensions.swift in Sources */,
+				6B761F9A232CE7F800FDE3FD /* LargeTableViewCell.swift in Sources */,
 				6B7473CC2323B11B006BBC20 /* ListViewController.swift in Sources */,
 				6B1D9B332321896100D02121 /* GithubRepo.swift in Sources */,
 				6B1D9B5123218B7E00D02121 /* URLComponentsExtension.swift in Sources */,
 				6B5A092623241B77001CBC10 /* ToolBarView.swift in Sources */,
 				6B5A092A2324F540001CBC10 /* ImageCacheService.swift in Sources */,
+				6B761FA2232CEAB400FDE3FD /* HeaderView.swift in Sources */,
 				6BADB3BC23254B790030245B /* DetailsViewController.swift in Sources */,
 				6B5A0921232412F1001CBC10 /* GithubRepoViewModel.swift in Sources */,
 				6B5A092323241410001CBC10 /* Int+extensions.swift in Sources */,
 				6B593E23232AB0DB0041E375 /* DetailsView.swift in Sources */,
-				6B5A091C2323D4CF001CBC10 /* SimpleTableViewCell.swift in Sources */,
+				6B5A091C2323D4CF001CBC10 /* RegularTableViewCell.swift in Sources */,
 				6B761F8C232CBEC000FDE3FD /* VariedListViewController.swift in Sources */,
 				6B1D9B5723218B7E00D02121 /* ProviderProtocol.swift in Sources */,
 			);

@@ -35,7 +35,7 @@ final class TableListViewController: UIViewController, Presentable {
     
     private func setupTableView() {
         tableView.contentInset = UIEdgeInsets(top: 4, left: 0, bottom: 0, right: 0)
-        tableView.register(cellAndNibName: SimpleTableViewCell.toString())
+        tableView.register(cellAndNibName: RegularTableViewCell.toString())
         
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
@@ -59,7 +59,7 @@ extension TableListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTableViewCell.toString(), for: indexPath) as? SimpleTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RegularTableViewCell.toString(), for: indexPath) as? RegularTableViewCell else { return UITableViewCell() }
         let cellData = data[indexPath.section][indexPath.row]
         cell.configure(withData: cellData)
         imageService.getImage(url: cellData.avatarUrl) { image in

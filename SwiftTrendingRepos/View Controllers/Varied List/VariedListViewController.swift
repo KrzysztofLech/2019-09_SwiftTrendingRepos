@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VariedListViewController: UIViewController, Presentable {
+final class VariedListViewController: UIViewController, Presentable {
     
     @IBOutlet var tableView: UITableView!
     
@@ -34,8 +34,11 @@ class VariedListViewController: UIViewController, Presentable {
     }
     
     private func setupTableView() {
-        tableView.contentInset = UIEdgeInsets(top: 4, left: 0, bottom: 0, right: 0)
-        tableView.register(cellAndNibName: SimpleTableViewCell.toString())
+        tableView.contentInset = UIEdgeInsets(top: 4, left: 0, bottom: 10, right: 0)
+        
+        tableView.register(cellAndNibName: LargeTableViewCell.toString())
+        tableView.register(cellAndNibName: RegularTableViewCell.toString())
+        tableView.register(cellAndNibName: CompactTableViewCell.toString())
         
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
@@ -59,13 +62,36 @@ extension VariedListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTableViewCell.toString(), for: indexPath) as? SimpleTableViewCell else { return UITableViewCell() }
-        let cellData = data[indexPath.section][indexPath.row]
-        cell.configure(withData: cellData)
-        imageService.getImage(url: cellData.avatarUrl) { image in
-            cell.setupAvatarImage(image)
+        let cell: (UITableViewCell & PresentableCell)?
+        
+        switch indexPath.section {
+        case 0:
+            cell = tableView.dequeueReusableCell(withIdentifier: LargeTableViewCell.toString(), for: indexPath) as? LargeTableViewCell
+            
+        case 1:
+            cell = tableView.dequeueReusableCell(withIdentifier: RegularTableViewCell.toString(), for: indexPath) as? RegularTableViewCell
+            
+        default:
+            cell = tableView.dequeueReusableCell(withIdentifier: CompactTableViewCell.toString(), for: indexPath) as? CompactTableViewCell
         }
-        return cell
+        
+        let cellData = data[indexPath.section][indexPath.row]
+        cell?.configure(withData: cellData)
+        imageService.getImage(url: cellData.avatarUrl) { image in
+            cell?.setupAvatarImage(image)
+        }
+        
+        return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = Bundle.main.loadNibNamed(HeaderView.toString(), owner: self, options: nil)?.last as? HeaderView
+        headerView?.setTitleForSection(section)
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  SimpleTableViewCell.swift
+//  RegularTableViewCell.swift
 //  SwiftTrendingRepos
 //
 //  Created by Krzysztof Lech on 07/09/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SimpleTableViewCell: UITableViewCell {
+final class RegularTableViewCell: UITableViewCell, PresentableCell {
 
     @IBOutlet private var containerView: UIView!
     @IBOutlet private var repoNameLabel: UILabel!
