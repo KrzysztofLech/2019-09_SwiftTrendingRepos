@@ -12,3 +12,7 @@ protocol TableListViewControllerDelegate: AnyObject {
     func refreshData(completion: @escaping ()->())
     func selectedRepo(atIndex index: IndexPath)
 }
+
+extension TableListViewControllerDelegate {
+    func refreshData(completion: @escaping ()->()) {}
+}

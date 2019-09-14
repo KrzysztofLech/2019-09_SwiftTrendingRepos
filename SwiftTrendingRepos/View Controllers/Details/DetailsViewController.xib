@@ -116,7 +116,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOZ-8s-Ufd" userLabel="Forks">
                                     <rect key="frame" x="149.66666666666666" y="0.0" width="125.33333333333334" height="50"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_fork" translatesAutoresizingMaskIntoConstraints="NO" id="AGp-OA-wmd" userLabel="Star icon">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_fork" translatesAutoresizingMaskIntoConstraints="NO" id="AGp-OA-wmd" userLabel="Fork icon">
                                             <rect key="frame" x="67.000000000000028" y="17.666666666666686" width="15" height="15"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </imageView>

@@ -55,8 +55,12 @@
 		6B761F9F232CE80800FDE3FD /* CompactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B761F9D232CE80800FDE3FD /* CompactTableViewCell.xib */; };
 		6B761FA2232CEAB400FDE3FD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761FA1232CEAB400FDE3FD /* HeaderView.swift */; };
 		6B761FA4232CEAC000FDE3FD /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B761FA3232CEAC000FDE3FD /* HeaderView.xib */; };
+		6B761FA8232D12B800FDE3FD /* LargeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761FA6232D12B800FDE3FD /* LargeCollectionViewCell.swift */; };
+		6B761FA9232D12B800FDE3FD /* LargeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B761FA7232D12B800FDE3FD /* LargeCollectionViewCell.xib */; };
+		6B761FAB232D135800FDE3FD /* CollectionView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761FAA232D135800FDE3FD /* CollectionView+extensions.swift */; };
 		6BADB3BC23254B790030245B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BADB3BA23254B790030245B /* DetailsViewController.swift */; };
 		6BADB3BD23254B790030245B /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BADB3BB23254B790030245B /* DetailsViewController.xib */; };
+		6BD67E20232D379900BE7E9F /* LargeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD67E1F232D379900BE7E9F /* LargeCollectionViewController.swift */; };
 		6BE59895232177FE007C45EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE59894232177FE007C45EC /* AppDelegate.swift */; };
 		6BE5989C232177FF007C45EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BE5989B232177FF007C45EC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -110,8 +114,12 @@
 		6B761F9D232CE80800FDE3FD /* CompactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompactTableViewCell.xib; sourceTree = "<group>"; };
 		6B761FA1232CEAB400FDE3FD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		6B761FA3232CEAC000FDE3FD /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		6B761FA6232D12B800FDE3FD /* LargeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCollectionViewCell.swift; sourceTree = "<group>"; };
+		6B761FA7232D12B800FDE3FD /* LargeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LargeCollectionViewCell.xib; sourceTree = "<group>"; };
+		6B761FAA232D135800FDE3FD /* CollectionView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+extensions.swift"; sourceTree = "<group>"; };
 		6BADB3BA23254B790030245B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		6BADB3BB23254B790030245B /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		6BD67E1F232D379900BE7E9F /* LargeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCollectionViewController.swift; sourceTree = "<group>"; };
 		6BE59891232177FE007C45EC /* SwiftTrendingRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTrendingRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE59894232177FE007C45EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BE5989B232177FF007C45EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,7 +140,10 @@
 		6B1CDFCC2328386E002A77A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6B761FA0232CEA9500FDE3FD /* Header View */,
+				6B5A092523241B77001CBC10 /* ToolBarView.swift */,
 				6B1CDFCD232838AA002A77A4 /* GradientView.swift */,
+				6B593E22232AB0DB0041E375 /* DetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -144,6 +155,7 @@
 				6B1D9B282321823500D02121 /* List */,
 				6B5A09102323CAC3001CBC10 /* Table List */,
 				6B761F88232CBD6E00FDE3FD /* Varied List */,
+				6BD67E21232D431600BE7E9F /* Large Collection View */,
 				6B1D9B292321824300D02121 /* Details */,
 			);
 			path = "View Controllers";
@@ -172,8 +184,6 @@
 		6B1D9B282321823500D02121 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				6B761F8E232CC45D00FDE3FD /* Protocols */,
-				6B5A092423241B46001CBC10 /* Views */,
 				6B7473CA2323B11B006BBC20 /* ListViewController.swift */,
 				6B7473CB2323B11B006BBC20 /* ListViewController.xib */,
 				6B7473D42323B7AF006BBC20 /* ListViewModel.swift */,
@@ -184,7 +194,6 @@
 		6B1D9B292321824300D02121 /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				6B593E21232AB0620041E375 /* Views */,
 				6BADB3BA23254B790030245B /* DetailsViewController.swift */,
 				6BADB3BB23254B790030245B /* DetailsViewController.xib */,
 			);
@@ -213,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				6B1D9B2D232182CE00D02121 /* Extensions */,
-				6B1CDFCC2328386E002A77A4 /* Views */,
 				6B7473D82323BF49006BBC20 /* Alert.swift */,
 			);
 			path = Helpers;
@@ -225,6 +233,7 @@
 				6B7473CF2323B36B006BBC20 /* UIView+extensions.swift */,
 				6B7473D02323B36B006BBC20 /* UIViewController+extensions.swift */,
 				6B5A091E2323DA9B001CBC10 /* UITableView+extensions.swift */,
+				6B761FAA232D135800FDE3FD /* CollectionView+extensions.swift */,
 				6B5A092223241410001CBC10 /* Int+extensions.swift */,
 			);
 			path = Extensions;
@@ -299,19 +308,9 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		6B593E21232AB0620041E375 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				6B593E22232AB0DB0041E375 /* DetailsView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		6B5A09102323CAC3001CBC10 /* Table List */ = {
 			isa = PBXGroup;
 			children = (
-				6B761FA0232CEA9500FDE3FD /* Views */,
-				6B5A09192323D48F001CBC10 /* Cells */,
 				6B5A09112323CB01001CBC10 /* TableListViewController.swift */,
 				6B5A09122323CB01001CBC10 /* TableListViewController.xib */,
 			);
@@ -324,16 +323,9 @@
 				6B761F96232CE75C00FDE3FD /* Large Size */,
 				6B761F95232CE75100FDE3FD /* Regular Size */,
 				6B761F97232CE77600FDE3FD /* Compact Size */,
+				6B761FA5232D125B00FDE3FD /* Large Size CollectionView Cell */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		6B5A092423241B46001CBC10 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				6B5A092523241B77001CBC10 /* ToolBarView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		6B5A092B2324FC29001CBC10 /* Image Service */ = {
@@ -348,18 +340,10 @@
 		6B761F88232CBD6E00FDE3FD /* Varied List */ = {
 			isa = PBXGroup;
 			children = (
-				6B761F89232CBD9F00FDE3FD /* Cells */,
 				6B761F8A232CBEC000FDE3FD /* VariedListViewController.swift */,
 				6B761F8B232CBEC000FDE3FD /* VariedListViewController.xib */,
 			);
 			path = "Varied List";
-			sourceTree = "<group>";
-		};
-		6B761F89232CBD9F00FDE3FD /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		6B761F8E232CC45D00FDE3FD /* Protocols */ = {
@@ -398,13 +382,30 @@
 			path = "Compact Size";
 			sourceTree = "<group>";
 		};
-		6B761FA0232CEA9500FDE3FD /* Views */ = {
+		6B761FA0232CEA9500FDE3FD /* Header View */ = {
 			isa = PBXGroup;
 			children = (
 				6B761FA1232CEAB400FDE3FD /* HeaderView.swift */,
 				6B761FA3232CEAC000FDE3FD /* HeaderView.xib */,
 			);
-			path = Views;
+			path = "Header View";
+			sourceTree = "<group>";
+		};
+		6B761FA5232D125B00FDE3FD /* Large Size CollectionView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6B761FA6232D12B800FDE3FD /* LargeCollectionViewCell.swift */,
+				6B761FA7232D12B800FDE3FD /* LargeCollectionViewCell.xib */,
+			);
+			path = "Large Size CollectionView Cell";
+			sourceTree = "<group>";
+		};
+		6BD67E21232D431600BE7E9F /* Large Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				6BD67E1F232D379900BE7E9F /* LargeCollectionViewController.swift */,
+			);
+			path = "Large Collection View";
 			sourceTree = "<group>";
 		};
 		6BE59888232177FE007C45EC = {
@@ -429,7 +430,10 @@
 				6BE598A0232177FF007C45EC /* Info.plist */,
 				6BE59894232177FE007C45EC /* AppDelegate.swift */,
 				6B1D9B2123217E8300D02121 /* View Controllers */,
+				6B761F8E232CC45D00FDE3FD /* Protocols */,
 				6B1D9B2A2321827E00D02121 /* Models */,
+				6B1CDFCC2328386E002A77A4 /* Views */,
+				6B5A09192323D48F001CBC10 /* Cells */,
 				6B1D9B2B2321828E00D02121 /* Services */,
 				6B1D9B2C232182A800D02121 /* Helpers */,
 				6B1D9B252321800C00D02121 /* Other */,
@@ -499,6 +503,7 @@
 				6B761F9B232CE7F800FDE3FD /* LargeTableViewCell.xib in Resources */,
 				6B761F9F232CE80800FDE3FD /* CompactTableViewCell.xib in Resources */,
 				6B761FA4232CEAC000FDE3FD /* HeaderView.xib in Resources */,
+				6B761FA9232D12B800FDE3FD /* LargeCollectionViewCell.xib in Resources */,
 				6B5A091D2323D4CF001CBC10 /* RegularTableViewCell.xib in Resources */,
 				6BE5989C232177FF007C45EC /* Assets.xcassets in Resources */,
 				6B5A09142323CB01001CBC10 /* TableListViewController.xib in Resources */,
@@ -527,6 +532,8 @@
 				6B1D9B4C23218B7E00D02121 /* NetworkTask.swift in Sources */,
 				6B1D9B4D23218B7E00D02121 /* HTTPMethod.swift in Sources */,
 				6BE59895232177FE007C45EC /* AppDelegate.swift in Sources */,
+				6BD67E20232D379900BE7E9F /* LargeCollectionViewController.swift in Sources */,
+				6B761FAB232D135800FDE3FD /* CollectionView+extensions.swift in Sources */,
 				6B7473D22323B36B006BBC20 /* UIView+extensions.swift in Sources */,
 				6B7473D92323BF49006BBC20 /* Alert.swift in Sources */,
 				6B1D9B5323218B7E00D02121 /* URLRequestExtension.swift in Sources */,
@@ -538,6 +545,7 @@
 				6B1D9B302321846200D02121 /* StartViewController.swift in Sources */,
 				6B761F90232CC47300FDE3FD /* Presentable.swift in Sources */,
 				6B5A091F2323DA9B001CBC10 /* UITableView+extensions.swift in Sources */,
+				6B761FA8232D12B800FDE3FD /* LargeCollectionViewCell.swift in Sources */,
 				6B1D9B4F23218B7E00D02121 /* NetworkError.swift in Sources */,
 				6B1D9B5623218B7E00D02121 /* URLSessionProtocol.swift in Sources */,
 				6B1D9B4B23218B7E00D02121 /* ParametersEncoding.swift in Sources */,

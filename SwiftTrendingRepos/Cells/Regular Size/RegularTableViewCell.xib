@@ -38,8 +38,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXy-cM-4qr">
-                                <rect key="frame" x="298.5" y="40" width="30.5" height="12"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="10"/>
+                                <rect key="frame" x="295.5" y="39" width="33.5" height="13"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -67,6 +67,7 @@
                             <constraint firstAttribute="bottom" secondItem="SUX-vV-MPf" secondAttribute="bottom" constant="18" id="TFw-wE-cVh"/>
                             <constraint firstItem="R9Y-oq-uf4" firstAttribute="leading" secondItem="KXy-cM-4qr" secondAttribute="trailing" constant="5" id="VYR-sR-UAQ"/>
                             <constraint firstItem="SUX-vV-MPf" firstAttribute="leading" secondItem="7Gz-8l-zoA" secondAttribute="leading" id="Vg0-tI-aMp"/>
+                            <constraint firstItem="KXy-cM-4qr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rhx-q1-RKd" secondAttribute="trailing" constant="16" id="ZLI-9f-1xw"/>
                             <constraint firstItem="Rhx-q1-RKd" firstAttribute="centerY" secondItem="SUX-vV-MPf" secondAttribute="centerY" constant="1" id="ezs-et-PMc"/>
                             <constraint firstItem="kAc-Cy-snJ" firstAttribute="centerX" secondItem="R9Y-oq-uf4" secondAttribute="centerX" id="hhd-c3-fOe"/>
                             <constraint firstAttribute="bottom" secondItem="R9Y-oq-uf4" secondAttribute="bottom" constant="10" id="lUT-sx-d2l"/>

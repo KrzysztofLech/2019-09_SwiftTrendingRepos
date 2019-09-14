@@ -14,25 +14,10 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="LargeTableViewCell" customModule="SwiftTrendingRepos" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="209.5"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDW-Gk-mRe">
-                        <rect key="frame" x="0.0" y="10.5" width="320" height="200"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="200" id="Ai8-0w-S7x"/>
-                        </constraints>
-                    </view>
-                </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                <constraints>
-                    <constraint firstAttribute="trailing" secondItem="zDW-Gk-mRe" secondAttribute="trailing" id="AuW-GT-sDu"/>
-                    <constraint firstItem="zDW-Gk-mRe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="XE8-MC-Bi0"/>
-                    <constraint firstAttribute="bottom" secondItem="zDW-Gk-mRe" secondAttribute="bottom" id="ldN-c5-HXt"/>
-                    <constraint firstItem="zDW-Gk-mRe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pUk-84-Tk4"/>
-                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </tableViewCell>

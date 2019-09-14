@@ -64,7 +64,7 @@ extension VariedListViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: LargeTableViewCell.toString(), for: indexPath) as? LargeTableViewCell
-            cell?.configure(withData: data[indexPath.section])
+            cell?.configure(withData: data[indexPath.section], delegate: delegate)
             return cell ?? UITableViewCell()
             
         case 1:
