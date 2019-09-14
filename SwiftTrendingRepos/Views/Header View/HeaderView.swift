@@ -22,9 +22,15 @@ enum SectionHeader: Int {
     }
 }
 
-final class HeaderView: UIView {
+final class HeaderView: GradientView {
 
     @IBOutlet private var titleLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        gradientSet = .toolBarBackground
+    }
     
     func setTitleForSection(_ section: Int) {
         titleLabel.text = SectionHeader(rawValue: section)?.title

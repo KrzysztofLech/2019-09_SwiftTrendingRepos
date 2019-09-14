@@ -27,10 +27,7 @@ class LargeCollectionViewCell: UICollectionViewCell {
     }
     
     private func setup() {
-        layer.cornerRadius = 8
-        layer.borderWidth = 1
-        layer.borderColor = Colors.textLight?.cgColor
-        
+        layer.cornerRadius = 4
         avatarImageView.layer.cornerRadius = 8
     }
     

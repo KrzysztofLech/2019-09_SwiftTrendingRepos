@@ -34,7 +34,6 @@ final class TableListViewController: UIViewController, Presentable {
     }
     
     private func setupTableView() {
-        tableView.contentInset = UIEdgeInsets(top: 4, left: 0, bottom: 0, right: 0)
         tableView.register(cellAndNibName: RegularTableViewCell.toString())
         
         tableView.refreshControl = refreshControl

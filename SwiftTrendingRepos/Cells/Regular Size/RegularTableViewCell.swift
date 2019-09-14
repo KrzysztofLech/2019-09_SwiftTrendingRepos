@@ -34,10 +34,7 @@ final class RegularTableViewCell: UITableViewCell {
     }
     
     private func setup() {
-        containerView.layer.cornerRadius = 8
-        containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = Colors.textLight?.cgColor
-        
+        containerView.layer.cornerRadius = 4        
         avatarImageView.layer.cornerRadius = avatarImageView.bounds.height / 2
     }
     

@@ -40,7 +40,7 @@ class DetailsView: UIView {
     }
     
     private func setupView() {
-        layer.cornerRadius = 16
+        layer.cornerRadius = 8
         
         layer.shadowOffset = CGSize(width: 0, height: 10)
         layer.shadowRadius = 20
@@ -49,7 +49,7 @@ class DetailsView: UIView {
     
     private func addGradientBackground() {
         let gradientView = GradientView()
-        gradientView.layer.cornerRadius = 16
+        gradientView.layer.cornerRadius = 8
         gradientView.layer.masksToBounds = true
         addSubview(gradientView)
         gradientView.fill(view: self)

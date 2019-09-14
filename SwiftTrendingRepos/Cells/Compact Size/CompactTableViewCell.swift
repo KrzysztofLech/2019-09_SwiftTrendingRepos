@@ -21,8 +21,6 @@ final class CompactTableViewCell: UITableViewCell {
     
     private func setup() {
         containerView.layer.cornerRadius = 4
-        containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = Colors.textLight?.cgColor
     }
     
     func configure(withData data: GithubRepoViewModel, index: Int?) {
