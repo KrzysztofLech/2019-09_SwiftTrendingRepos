@@ -12,7 +12,7 @@ final class TableListViewController: UIViewController, Presentable {
 
     @IBOutlet var tableView: UITableView!
     
-    var data: [GithubRepoViewModel] = []
+    var data: [[GithubRepoViewModel]] = []
     weak var delegate: TableListViewControllerDelegate?
     
     private let imageService: ImageServiceProtocol
@@ -50,13 +50,17 @@ final class TableListViewController: UIViewController, Presentable {
 }
 
 extension TableListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data[section].count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTableViewCell.toString(), for: indexPath) as? SimpleTableViewCell else { return UITableViewCell() }
-        let cellData = data[indexPath.row]
+        let cellData = data[indexPath.section][indexPath.row]
         cell.configure(withData: cellData)
         imageService.getImage(url: cellData.avatarUrl) { image in
             cell.setupAvatarImage(image)

@@ -10,10 +10,38 @@ import Foundation
 
 class ListViewModel {
     
-    private(set) var reposList: [GithubRepoViewModel] = []
+    private enum Constants {
+        static let firstSectionItemQuantity = 3
+        static let secondSectionItemQuantity = 10
+    }
+    
+    private var reposList: [GithubRepoViewModel] = []
+    var repoCounter: Int { return reposList.count }
+    
+    var oneSectionData: [[GithubRepoViewModel]] {
+        var array: [[GithubRepoViewModel]] = []
+        array.append(reposList)
+        return array
+    }
+    
+    var manySectionsData: [[GithubRepoViewModel]] {
+        var array: [[GithubRepoViewModel]] = []
+        
+        let firstSectionData = Array(reposList.prefix(Constants.firstSectionItemQuantity))
+        array.append(firstSectionData)
+        
+        let secondSectionData = Array(reposList.prefix(Constants.secondSectionItemQuantity))
+        array.append(secondSectionData)
+
+        let thirdSectionItemQuantity = reposList.count - Constants.secondSectionItemQuantity
+        let thirdSectionData = Array(reposList.suffix(thirdSectionItemQuantity))
+        array.append(thirdSectionData)
+        
+        return array
+    }
     
     var apiServiceWorker: ApiServiceWorkerProtocol?
-    var repoCounter: Int { return reposList.count }
+    
     
     init(apiService: ApiServiceWorkerProtocol = ApiServiceWorker() ) {
         apiServiceWorker = apiService

@@ -10,6 +10,6 @@ import UIKit
 
 protocol Presentable {
     var tableView: UITableView! { get set }
-    var data: [GithubRepoViewModel] { get set }
+    var data: [[GithubRepoViewModel]] { get set }
     var delegate: TableListViewControllerDelegate? { get set }
 }

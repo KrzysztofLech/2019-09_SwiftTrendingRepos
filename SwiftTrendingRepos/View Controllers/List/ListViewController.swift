@@ -15,7 +15,7 @@ final class ListViewController: UIViewController {
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
     private let viewModel: ListViewModel
-    private var isVariedControlerVisible = false
+    private var isVariedControlerVisible = true
     private var currentViewController: UIViewController?
     
     init(viewModel: ListViewModel = ListViewModel()) {
@@ -69,7 +69,8 @@ final class ListViewController: UIViewController {
         listView.fill(view: containerView)
         
         listViewController.delegate = self
-        listViewController.data = viewModel.reposList
+        let dataToPresent = isVariedControlerVisible ? viewModel.manySectionsData : viewModel.oneSectionData
+        listViewController.data = dataToPresent
         
         currentViewController?.view.removeFromSuperview()
         currentViewController?.removeFromParent()
@@ -99,7 +100,8 @@ extension ListViewController: TableListViewControllerDelegate {
     func selectedRepo(atIndex index: IndexPath) {
         let detailsViewController = DetailsViewController()
         detailsViewController.modalTransitionStyle = .crossDissolve
-        detailsViewController.repoItem = viewModel.reposList[index.row]
+        let selectedRepo = isVariedControlerVisible ? viewModel.manySectionsData[index.section][index.row] : viewModel.oneSectionData[index.section][index.row]
+        detailsViewController.repoItem = selectedRepo
         present(detailsViewController, animated: true)
     }
 }
