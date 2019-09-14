@@ -1,15 +1,15 @@
 //
-//  TableListViewController.swift
+//  VariedListViewController.swift
 //  SwiftTrendingRepos
 //
-//  Created by Krzysztof Lech on 07/09/2019.
+//  Created by Krzysztof Lech on 14/09/2019.
 //  Copyright © 2019 Krzysztof Lech. All rights reserved.
 //
 
 import UIKit
 
-final class TableListViewController: UIViewController, Presentable {
-
+class VariedListViewController: UIViewController, Presentable {
+    
     @IBOutlet var tableView: UITableView!
     
     var data: [GithubRepoViewModel] = []
@@ -49,23 +49,23 @@ final class TableListViewController: UIViewController, Presentable {
     }
 }
 
-extension TableListViewController: UITableViewDataSource {
+extension VariedListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTableViewCell.toString(), for: indexPath) as? SimpleTableViewCell else { return UITableViewCell() }
-        let cellData = data[indexPath.row]
-        cell.configure(withData: cellData)
-        imageService.getImage(url: cellData.avatarUrl) { image in
-            cell.setupAvatarImage(image)
-        }
+//        let cellData = data[indexPath.row]
+//        cell.configure(withData: cellData)
+//        imageService.getImage(url: cellData.avatarUrl) { image in
+//            cell.setupAvatarImage(image)
+//        }
         return cell
     }
 }
 
-extension TableListViewController: UITableViewDelegate {
+extension VariedListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.selectedRepo(atIndex: indexPath)
     }

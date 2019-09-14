@@ -15,6 +15,8 @@ final class ListViewController: UIViewController {
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
     private let viewModel: ListViewModel
+    private var isVariedControlerVisible = false
+    private var currentViewController: UIViewController?
     
     init(viewModel: ListViewModel = ListViewModel()) {
         self.viewModel = viewModel
@@ -55,24 +57,30 @@ final class ListViewController: UIViewController {
     
     private func presentData() {
         toolBarView.changeCounterValue(viewModel.repoCounter)
-        showTable()
+        setupCurrentTableViewController()
     }
     
-    private func showTable() {
-        let tableListViewController = TableListViewController()
-        addChild(tableListViewController)
+    private func setupCurrentTableViewController() {
+        var listViewController: (Presentable & UIViewController) = isVariedControlerVisible ? VariedListViewController() : TableListViewController()
+        addChild(listViewController)
         
-        guard let tableListView = tableListViewController.view else { return }
-        containerView.addSubview(tableListView)
-        tableListView.fill(view: containerView)
+        guard let listView = listViewController.view else { return }
+        containerView.addSubview(listView)
+        listView.fill(view: containerView)
         
-        tableListViewController.delegate = self
-        tableListViewController.data = viewModel.reposList
+        listViewController.delegate = self
+        listViewController.data = viewModel.reposList
+        
+        currentViewController?.view.removeFromSuperview()
+        currentViewController?.removeFromParent()
+        currentViewController = listViewController
     }
 }
+
 extension ListViewController: ToolBarViewDelegate {
     func changeLayoutButtonTapped() {
-        print("Tapped!")
+        isVariedControlerVisible.toggle()
+        setupCurrentTableViewController()
     }
 }
 
