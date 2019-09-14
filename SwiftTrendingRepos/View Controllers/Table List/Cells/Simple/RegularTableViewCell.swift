@@ -41,7 +41,7 @@ final class RegularTableViewCell: UITableViewCell, PresentableCell {
         avatarImageView.layer.cornerRadius = avatarImageView.bounds.height / 2
     }
     
-    func configure(withData data: GithubRepoViewModel) {
+    func configure(withData data: GithubRepoViewModel, index: Int?) {
         repoNameLabel.text = data.name
         starsLabel.text = String(data.stars)
         authorLabel.text = data.author

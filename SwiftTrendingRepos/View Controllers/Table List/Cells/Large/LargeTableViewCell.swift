@@ -9,7 +9,8 @@
 import UIKit
 
 final class LargeTableViewCell: UITableViewCell, PresentableCell {
-    func configure(withData data: GithubRepoViewModel) {
+    
+    func configure(withData data: GithubRepoViewModel, index: Int?) {
         
     }
     

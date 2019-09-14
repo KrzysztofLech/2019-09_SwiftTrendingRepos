@@ -9,6 +9,10 @@
 import UIKit
 
 protocol PresentableCell {
-    func configure(withData data: GithubRepoViewModel)
+    func configure(withData data: GithubRepoViewModel, index: Int?)
     func setupAvatarImage(_ image: UIImage?)
+}
+
+extension PresentableCell {
+    func setupAvatarImage(_ image: UIImage?) {}
 }

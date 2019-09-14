@@ -58,6 +58,7 @@ extension VariedListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 { return 1 }
         return data[section].count
     }
     
@@ -75,8 +76,9 @@ extension VariedListViewController: UITableViewDataSource {
             cell = tableView.dequeueReusableCell(withIdentifier: CompactTableViewCell.toString(), for: indexPath) as? CompactTableViewCell
         }
         
+        let dataIndex = data[1].count + indexPath.row + 1
         let cellData = data[indexPath.section][indexPath.row]
-        cell?.configure(withData: cellData)
+        cell?.configure(withData: cellData, index: dataIndex)
         imageService.getImage(url: cellData.avatarUrl) { image in
             cell?.setupAvatarImage(image)
         }

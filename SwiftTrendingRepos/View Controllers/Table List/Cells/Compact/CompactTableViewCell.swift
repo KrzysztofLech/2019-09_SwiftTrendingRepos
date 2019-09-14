@@ -9,11 +9,25 @@
 import UIKit
 
 final class CompactTableViewCell: UITableViewCell, PresentableCell {
-    func configure(withData data: GithubRepoViewModel) {
-        
+    
+    @IBOutlet private var containerView: UIView!
+    @IBOutlet private var indexLabel: UILabel!
+    @IBOutlet private var repoNameLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setup()
     }
     
-    func setupAvatarImage(_ image: UIImage?) {
-        
+    private func setup() {
+        containerView.layer.cornerRadius = 4
+        containerView.layer.borderWidth = 1
+        containerView.layer.borderColor = Colors.textLight?.cgColor
+    }
+    
+    func configure(withData data: GithubRepoViewModel, index: Int?) {
+        repoNameLabel.text = data.name
+        guard let index = index else { return }
+        indexLabel.text = String(index) + "."
     }
 }

@@ -18,10 +18,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZi-YG-1pQ">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZi-YG-1pQ" customClass="GradientView" customModule="SwiftTrendingRepos" customModuleProvider="target">
                         <rect key="frame" x="10" y="10.5" width="300" height="40"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.37086546266233766" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8I-hk-g7G">
+                                <rect key="frame" x="10" y="13" width="20" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="0Wi-5w-nlP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFS-hf-qTp">
+                                <rect key="frame" x="40" y="10.5" width="250" height="19"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.428016377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="MFS-hf-qTp" firstAttribute="leading" secondItem="h8I-hk-g7G" secondAttribute="trailing" constant="10" id="JJK-dF-mMe"/>
+                            <constraint firstAttribute="trailing" secondItem="MFS-hf-qTp" secondAttribute="trailing" constant="10" id="JWq-A1-hxr"/>
+                            <constraint firstItem="MFS-hf-qTp" firstAttribute="centerY" secondItem="hZi-YG-1pQ" secondAttribute="centerY" id="KiK-WA-Mon"/>
+                            <constraint firstItem="h8I-hk-g7G" firstAttribute="centerY" secondItem="hZi-YG-1pQ" secondAttribute="centerY" id="WRB-Ba-d6T"/>
+                            <constraint firstItem="h8I-hk-g7G" firstAttribute="leading" secondItem="hZi-YG-1pQ" secondAttribute="leading" constant="10" id="hMS-2o-hCX"/>
                             <constraint firstAttribute="height" constant="40" id="kuL-On-OFp"/>
                         </constraints>
                     </view>
@@ -35,6 +57,11 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="containerView" destination="hZi-YG-1pQ" id="gid-pz-bvZ"/>
+                <outlet property="indexLabel" destination="h8I-hk-g7G" id="RHc-rc-cNM"/>
+                <outlet property="repoNameLabel" destination="MFS-hf-qTp" id="qYi-h3-abL"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
