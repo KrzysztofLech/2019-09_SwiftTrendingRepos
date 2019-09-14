@@ -49,7 +49,6 @@
 		6B761F8D232CBEC000FDE3FD /* VariedListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B761F8B232CBEC000FDE3FD /* VariedListViewController.xib */; };
 		6B761F90232CC47300FDE3FD /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761F8F232CC47300FDE3FD /* Presentable.swift */; };
 		6B761F92232CC9A800FDE3FD /* TableListViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761F91232CC9A800FDE3FD /* TableListViewControllerDelegate.swift */; };
-		6B761F94232CE40400FDE3FD /* PresentableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761F93232CE40400FDE3FD /* PresentableCell.swift */; };
 		6B761F9A232CE7F800FDE3FD /* LargeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761F98232CE7F800FDE3FD /* LargeTableViewCell.swift */; };
 		6B761F9B232CE7F800FDE3FD /* LargeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B761F99232CE7F800FDE3FD /* LargeTableViewCell.xib */; };
 		6B761F9E232CE80800FDE3FD /* CompactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B761F9C232CE80800FDE3FD /* CompactTableViewCell.swift */; };
@@ -105,7 +104,6 @@
 		6B761F8B232CBEC000FDE3FD /* VariedListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VariedListViewController.xib; sourceTree = "<group>"; };
 		6B761F8F232CC47300FDE3FD /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		6B761F91232CC9A800FDE3FD /* TableListViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListViewControllerDelegate.swift; sourceTree = "<group>"; };
-		6B761F93232CE40400FDE3FD /* PresentableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableCell.swift; sourceTree = "<group>"; };
 		6B761F98232CE7F800FDE3FD /* LargeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTableViewCell.swift; sourceTree = "<group>"; };
 		6B761F99232CE7F800FDE3FD /* LargeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LargeTableViewCell.xib; sourceTree = "<group>"; };
 		6B761F9C232CE80800FDE3FD /* CompactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactTableViewCell.swift; sourceTree = "<group>"; };
@@ -369,7 +367,6 @@
 			children = (
 				6B761F8F232CC47300FDE3FD /* Presentable.swift */,
 				6B761F91232CC9A800FDE3FD /* TableListViewControllerDelegate.swift */,
-				6B761F93232CE40400FDE3FD /* PresentableCell.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -533,7 +530,6 @@
 				6B7473D22323B36B006BBC20 /* UIView+extensions.swift in Sources */,
 				6B7473D92323BF49006BBC20 /* Alert.swift in Sources */,
 				6B1D9B5323218B7E00D02121 /* URLRequestExtension.swift in Sources */,
-				6B761F94232CE40400FDE3FD /* PresentableCell.swift in Sources */,
 				6B1D9B5823218B7E00D02121 /* ApiService.swift in Sources */,
 				6B761F9E232CE80800FDE3FD /* CompactTableViewCell.swift in Sources */,
 				6B5A092823243D65001CBC10 /* ImageService.swift in Sources */,

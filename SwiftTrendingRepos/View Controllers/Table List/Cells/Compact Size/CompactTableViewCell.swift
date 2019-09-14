@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CompactTableViewCell: UITableViewCell, PresentableCell {
+final class CompactTableViewCell: UITableViewCell {
     
     @IBOutlet private var containerView: UIView!
     @IBOutlet private var indexLabel: UILabel!

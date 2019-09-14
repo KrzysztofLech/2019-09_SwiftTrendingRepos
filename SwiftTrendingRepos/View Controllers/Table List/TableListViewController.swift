@@ -62,7 +62,7 @@ extension TableListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RegularTableViewCell.toString(), for: indexPath) as? RegularTableViewCell else { return UITableViewCell() }
         
         let cellData = data[indexPath.section][indexPath.row]
-        cell.configure(withData: cellData, index: nil)
+        cell.configure(withData: cellData)
         imageService.getImage(url: cellData.avatarUrl) { image in
             cell.setupAvatarImage(image)
         }

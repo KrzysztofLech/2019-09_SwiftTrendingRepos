@@ -8,13 +8,9 @@
 
 import UIKit
 
-final class LargeTableViewCell: UITableViewCell, PresentableCell {
+final class LargeTableViewCell: UITableViewCell {
     
-    func configure(withData data: GithubRepoViewModel, index: Int?) {
-        
-    }
-    
-    func setupAvatarImage(_ image: UIImage?) {
+    func configure(withData data: [GithubRepoViewModel]) {
         
     }
 }
