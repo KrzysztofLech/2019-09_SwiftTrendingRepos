@@ -34,8 +34,6 @@ final class VariedListViewController: UIViewController, Presentable {
     }
     
     private func setupTableView() {
-        tableView.contentInset = UIEdgeInsets(top: 4, left: 0, bottom: 10, right: 0)
-        
         tableView.register(cellAndNibName: LargeTableViewCell.toString())
         tableView.register(cellAndNibName: RegularTableViewCell.toString())
         tableView.register(cellAndNibName: CompactTableViewCell.toString())
@@ -99,6 +97,7 @@ extension VariedListViewController: UITableViewDataSource {
 
 extension VariedListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section != 0 else { return }
         delegate?.selectedRepo(atIndex: indexPath)
     }
 }
