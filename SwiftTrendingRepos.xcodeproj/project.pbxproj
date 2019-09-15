@@ -61,6 +61,7 @@
 		6BADB3BC23254B790030245B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BADB3BA23254B790030245B /* DetailsViewController.swift */; };
 		6BADB3BD23254B790030245B /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BADB3BB23254B790030245B /* DetailsViewController.xib */; };
 		6BD67E20232D379900BE7E9F /* LargeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD67E1F232D379900BE7E9F /* LargeCollectionViewController.swift */; };
+		6BD67E28232E81ED00BE7E9F /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD67E27232E81ED00BE7E9F /* UserDefaultsService.swift */; };
 		6BE59895232177FE007C45EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE59894232177FE007C45EC /* AppDelegate.swift */; };
 		6BE5989C232177FF007C45EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BE5989B232177FF007C45EC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -120,6 +121,7 @@
 		6BADB3BA23254B790030245B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		6BADB3BB23254B790030245B /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		6BD67E1F232D379900BE7E9F /* LargeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCollectionViewController.swift; sourceTree = "<group>"; };
+		6BD67E27232E81ED00BE7E9F /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		6BE59891232177FE007C45EC /* SwiftTrendingRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTrendingRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE59894232177FE007C45EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BE5989B232177FF007C45EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			children = (
 				6B1D9B3423218B7E00D02121 /* Networking */,
 				6B5A092B2324FC29001CBC10 /* Image Service */,
+				6BD67E27232E81ED00BE7E9F /* UserDefaultsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				6BE59895232177FE007C45EC /* AppDelegate.swift in Sources */,
 				6BD67E20232D379900BE7E9F /* LargeCollectionViewController.swift in Sources */,
 				6B761FAB232D135800FDE3FD /* CollectionView+extensions.swift in Sources */,
+				6BD67E28232E81ED00BE7E9F /* UserDefaultsService.swift in Sources */,
 				6B7473D22323B36B006BBC20 /* UIView+extensions.swift in Sources */,
 				6B7473D92323BF49006BBC20 /* Alert.swift in Sources */,
 				6B1D9B5323218B7E00D02121 /* URLRequestExtension.swift in Sources */,

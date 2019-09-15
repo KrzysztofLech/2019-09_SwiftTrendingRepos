@@ -15,11 +15,14 @@ final class ListViewController: UIViewController {
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
     private let viewModel: ListViewModel
-    private var isVariedControlerVisible = true
+    private let userDefaultsService: UserDefaultsServiceProtocol
+    
+    private var isVariedControlerVisible = false
     private var currentViewController: UIViewController?
     
-    init(viewModel: ListViewModel = ListViewModel()) {
+    init(viewModel: ListViewModel = ListViewModel(), userDefaultsService: UserDefaultsServiceProtocol = UserDefaultsService()) {
         self.viewModel = viewModel
+        self.userDefaultsService = userDefaultsService
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,9 +36,19 @@ final class ListViewController: UIViewController {
         super.viewDidLoad()
         
         toolBarView.delegate = self
+        setupLayoutStyle()
         fetchData()
     }
 
+    private func setupLayoutStyle() {
+        isVariedControlerVisible = userDefaultsService.getLayoutStyle() != .simple
+    }
+    
+    private func saveSelectedLayoutStyle() {
+        let style: LayoutStyle = isVariedControlerVisible ? .varied : .simple
+        userDefaultsService.saveLayoutStyle(style)
+    }
+    
     private func fetchData() {
         activityIndicator.startAnimating()
         viewModel.fetchData(completion: { [weak self] error in
@@ -81,6 +94,7 @@ final class ListViewController: UIViewController {
 extension ListViewController: ToolBarViewDelegate {
     func changeLayoutButtonTapped() {
         isVariedControlerVisible.toggle()
+        saveSelectedLayoutStyle()
         setupCurrentTableViewController()
     }
 }
