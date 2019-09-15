@@ -10,8 +10,10 @@ import UIKit
 
 final class StartViewController: UIViewController {
     
-    @IBOutlet private var logoImageView: UIImageView!
-    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet var logoImageView: UIImageView!
+    @IBOutlet var titleLabel: UILabel!
+    
+    private let circularTransition = CircularTransition()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -21,7 +23,7 @@ final class StartViewController: UIViewController {
     
     private func navigateToListScreen() {
         let listViewController = ListViewController()
-        listViewController.modalTransitionStyle = .crossDissolve
+        listViewController.transitioningDelegate = circularTransition
         present(listViewController, animated: true)
     }
 }
