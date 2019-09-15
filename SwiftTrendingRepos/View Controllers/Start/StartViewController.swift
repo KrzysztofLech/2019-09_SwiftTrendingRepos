@@ -10,6 +10,9 @@ import UIKit
 
 final class StartViewController: UIViewController {
     
+    @IBOutlet private var logoImageView: UIImageView!
+    @IBOutlet private var titleLabel: UILabel!
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
