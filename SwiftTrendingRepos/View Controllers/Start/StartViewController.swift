@@ -23,6 +23,7 @@ final class StartViewController: UIViewController {
     
     private func navigateToListScreen() {
         let listViewController = ListViewController()
+        listViewController.modalPresentationStyle = .fullScreen
         listViewController.transitioningDelegate = circularTransition
         present(listViewController, animated: true)
     }

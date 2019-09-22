@@ -42,7 +42,6 @@ class ListViewModel {
     
     var apiServiceWorker: ApiServiceWorkerProtocol?
     
-    
     init(apiService: ApiServiceWorkerProtocol = ApiServiceWorker() ) {
         apiServiceWorker = apiService
     }

@@ -113,6 +113,7 @@ extension ListViewController: TableListViewControllerDelegate {
     
     func selectedRepo(atIndex index: IndexPath) {
         let detailsViewController = DetailsViewController()
+        detailsViewController.modalPresentationStyle = .fullScreen
         detailsViewController.modalTransitionStyle = .crossDissolve
         let selectedRepo = isVariedControlerVisible ? viewModel.manySectionsData[index.section][index.row] : viewModel.oneSectionData[index.section][index.row]
         detailsViewController.repoItem = selectedRepo
