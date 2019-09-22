@@ -33,6 +33,18 @@ final class TableListViewController: UIViewController, Presentable {
         setupTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.isHidden = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+            
+        showCells()
+    }
+    
     private func setupTableView() {
         tableView.register(cellAndNibName: RegularTableViewCell.toString())
         
@@ -45,6 +57,12 @@ final class TableListViewController: UIViewController, Presentable {
             self?.tableView.reloadData()
             self?.refreshControl.endRefreshing()
         }
+    }
+    
+    private func showCells() {
+        tableView.moveVisibleCellsOutside()
+        tableView.isHidden = false
+        tableView.moveCellsToVisibleArea(animated: true)
     }
 }
 
@@ -71,6 +89,11 @@ extension TableListViewController: UITableViewDataSource {
 
 extension TableListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.selectedRepo(atIndex: indexPath)
+        tableView.moveCellsOutsideWithAnimations(withoutCellWithIndex: indexPath)
+        
+        let selectedCell = tableView.cellForRow(at: indexPath)
+        selectedCell?.animateSelectedItem { [weak self] in
+            self?.delegate?.selectedRepo(atIndex: indexPath)
+        }
     }
 }
